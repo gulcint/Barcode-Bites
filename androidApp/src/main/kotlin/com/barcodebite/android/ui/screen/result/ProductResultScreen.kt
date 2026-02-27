@@ -4,6 +4,8 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
@@ -70,9 +72,10 @@ fun ProductResultScreen(
     Column(
         modifier = Modifier
             .fillMaxSize()
+            .verticalScroll(rememberScrollState())
             .padding(24.dp),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Top,
+        horizontalAlignment = Alignment.Start,
     ) {
         Text(
             text = "Ürün Sonucu",
@@ -131,10 +134,15 @@ fun ProductResultScreen(
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.padding(top = 6.dp),
                 )
+                NutritionChart(
+                    nutrition = data.product.nutrition,
+                    grade = data.score.grade,
+                    modifier = Modifier.padding(top = 20.dp),
+                )
                 Text(
                     text = "Kalori: ${data.product.nutrition.calories} kcal | Şeker: ${data.product.nutrition.sugar} g | Tuz: ${data.product.nutrition.salt} g",
                     style = MaterialTheme.typography.bodySmall,
-                    modifier = Modifier.padding(top = 12.dp),
+                    modifier = Modifier.padding(top = 14.dp),
                 )
             }
         }
