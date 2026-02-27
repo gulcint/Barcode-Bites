@@ -13,7 +13,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun ProductResultScreen(onBackToHome: () -> Unit) {
+fun ProductResultScreen(
+    barcode: String,
+    onBackToHome: () -> Unit,
+) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -26,9 +29,14 @@ fun ProductResultScreen(onBackToHome: () -> Unit) {
             style = MaterialTheme.typography.headlineMedium,
         )
         Text(
-            text = "Temel sonuç ekranı hazır. Detay bileşenler sonraki adımda.",
+            text = "Okutulan barkod: $barcode",
             style = MaterialTheme.typography.bodyLarge,
-            modifier = Modifier.padding(top = 12.dp, bottom = 24.dp),
+            modifier = Modifier.padding(top = 12.dp),
+        )
+        Text(
+            text = "Detay analiz kartları bir sonraki adımda bağlanacak.",
+            style = MaterialTheme.typography.bodyMedium,
+            modifier = Modifier.padding(top = 8.dp, bottom = 24.dp),
         )
         Button(onClick = onBackToHome) {
             Text("Ana Sayfaya Dön")
