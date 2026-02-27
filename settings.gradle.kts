@@ -18,3 +18,4 @@ rootProject.name = "BarcodeBite"
 
 include(":backend")
 include(":shared")
+include(":androidApp")
