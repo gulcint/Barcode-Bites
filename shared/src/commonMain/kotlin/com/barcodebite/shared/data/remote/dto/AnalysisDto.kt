@@ -9,10 +9,14 @@ data class AnalysisDto(
     val score: Int,
     val grade: String,
     val summary: String,
+    val cleanLabelScore: Int = 0,
+    val cleanLabelVerdict: String = "Unknown",
 )
 
 fun AnalysisDto.toDomain(): NutritionScore = NutritionScore(
     score = score,
     grade = grade,
     reason = summary,
+    cleanLabelScore = cleanLabelScore,
+    cleanLabelVerdict = cleanLabelVerdict,
 )
