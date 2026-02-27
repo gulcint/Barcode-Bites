@@ -1,22 +1,48 @@
 package com.barcodebite.backend
 
+import com.barcodebite.backend.config.AppConfig
+import com.barcodebite.backend.config.DatabaseConfig
+import com.barcodebite.backend.config.JwtConfig
 import io.ktor.client.request.get
 import io.ktor.client.request.post
 import io.ktor.client.request.setBody
 import io.ktor.client.statement.bodyAsText
 import io.ktor.http.ContentType
+import io.ktor.http.HttpHeaders
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.contentType
 import io.ktor.server.testing.testApplication
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
 
 class ApplicationTest {
+    private val json = Json { ignoreUnknownKeys = true }
+
+    private fun testConfig(databaseName: String): AppConfig {
+        return AppConfig(
+            database = DatabaseConfig(
+                url = "jdbc:h2:mem:$databaseName;MODE=PostgreSQL;DB_CLOSE_DELAY=-1",
+                user = "sa",
+                password = "",
+                driver = "org.h2.Driver",
+                maxPoolSize = 2,
+            ),
+            jwt = JwtConfig(
+                secret = "test-secret-very-secure",
+                issuer = "test.barcodebite",
+                audience = "test-users",
+                expiresInHours = 2,
+            ),
+        )
+    }
 
     @Test
     fun healthEndpointReturnsOkStatus() = testApplication {
-        application { module() }
+        application { module(appConfig = testConfig("health")) }
 
         val response = client.get("/health")
 
@@ -25,27 +51,87 @@ class ApplicationTest {
     }
 
     @Test
-    fun productEndpointReturnsBarcodePayload() = testApplication {
-        application { module() }
+    fun registerLoginAndGetCurrentUserFlowWorks() = testApplication {
+        application { module(appConfig = testConfig("auth-flow")) }
 
-        val barcode = "8690504012345"
-        val response = client.get("/v1/products/$barcode")
+        val registerResponse = client.post("/v1/auth/register") {
+            contentType(ContentType.Application.Json)
+            setBody("""{"email":"alice@barcodebite.dev","password":"Password123!"}""")
+        }
+        assertEquals(HttpStatusCode.Created, registerResponse.status)
 
-        assertEquals(HttpStatusCode.OK, response.status)
-        assertTrue(response.bodyAsText().contains(barcode))
+        val registerJson = json.parseToJsonElement(registerResponse.bodyAsText()).jsonObject
+        val accessToken = registerJson["accessToken"]?.jsonPrimitive?.content ?: ""
+        assertTrue(accessToken.isNotBlank())
+
+        val duplicateRegisterResponse = client.post("/v1/auth/register") {
+            contentType(ContentType.Application.Json)
+            setBody("""{"email":"alice@barcodebite.dev","password":"Password123!"}""")
+        }
+        assertEquals(HttpStatusCode.Conflict, duplicateRegisterResponse.status)
+
+        val meUnauthorized = client.get("/v1/users/me")
+        assertEquals(HttpStatusCode.Unauthorized, meUnauthorized.status)
+
+        val meResponse = client.get("/v1/users/me") {
+            headers.append(HttpHeaders.Authorization, "Bearer $accessToken")
+        }
+        assertEquals(HttpStatusCode.OK, meResponse.status)
+        assertTrue(meResponse.bodyAsText().contains("alice@barcodebite.dev"))
+
+        val invalidLoginResponse = client.post("/v1/auth/login") {
+            contentType(ContentType.Application.Json)
+            setBody("""{"email":"alice@barcodebite.dev","password":"WrongPass123"}""")
+        }
+        assertEquals(HttpStatusCode.Unauthorized, invalidLoginResponse.status)
+
+        val loginResponse = client.post("/v1/auth/login") {
+            contentType(ContentType.Application.Json)
+            setBody("""{"email":"alice@barcodebite.dev","password":"Password123!"}""")
+        }
+        assertEquals(HttpStatusCode.OK, loginResponse.status)
+        assertTrue(loginResponse.bodyAsText().contains("\"accessToken\""))
     }
 
     @Test
-    fun analysisEndpointReturnsScoreAndGrade() = testApplication {
-        application { module() }
+    fun productAndAnalysisEndpointsUsePersistedData() = testApplication {
+        application { module(appConfig = testConfig("product-analysis")) }
+
+        val barcode = "8690504012345"
+        val createResponse = client.post("/v1/products") {
+            contentType(ContentType.Application.Json)
+            setBody(
+                """
+                {
+                  "barcode":"$barcode",
+                  "name":"Sugary Snack",
+                  "brand":"Snack Co",
+                  "nutrition":{
+                    "calories":450.0,
+                    "protein":5.0,
+                    "carbohydrates":70.0,
+                    "fat":18.0,
+                    "sugar":30.0,
+                    "salt":1.0
+                  }
+                }
+                """.trimIndent(),
+            )
+        }
+        assertEquals(HttpStatusCode.Created, createResponse.status)
+
+        val productResponse = client.get("/v1/products/$barcode")
+        assertEquals(HttpStatusCode.OK, productResponse.status)
+        assertTrue(productResponse.bodyAsText().contains("Sugary Snack"))
 
         val response = client.post("/v1/analysis") {
             contentType(ContentType.Application.Json)
-            setBody("""{"barcode":"8690504012345"}""")
+            setBody("""{"barcode":"$barcode"}""")
         }
 
         assertEquals(HttpStatusCode.OK, response.status)
-        assertTrue(response.bodyAsText().contains("\"score\""))
-        assertTrue(response.bodyAsText().contains("\"grade\""))
+        val analysisJson = json.parseToJsonElement(response.bodyAsText()).jsonObject
+        assertEquals("E", analysisJson["grade"]?.jsonPrimitive?.content)
+        assertEquals(barcode, analysisJson["barcode"]?.jsonPrimitive?.content)
     }
 }
