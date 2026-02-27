@@ -30,6 +30,8 @@ data class ProductRequest(
     val name: String,
     val brand: String,
     val nutrition: NutritionPayload,
+    val ingredients: String = "",
+    val additives: List<String> = emptyList(),
 )
 
 @Serializable
@@ -38,6 +40,8 @@ data class ProductResponse(
     val name: String,
     val brand: String,
     val nutrition: NutritionPayload,
+    val ingredients: String,
+    val additives: List<String>,
 )
 
 fun Route.productRoutes(productService: ProductService) {
@@ -79,6 +83,8 @@ private fun ProductRequest.toDomain(): ProductRecord {
             sugar = nutrition.sugar,
             salt = nutrition.salt,
         ),
+        ingredients = ingredients,
+        additives = additives,
     )
 }
 
@@ -95,5 +101,7 @@ private fun ProductRecord.toResponse(): ProductResponse {
             sugar = nutrition.sugar,
             salt = nutrition.salt,
         ),
+        ingredients = ingredients,
+        additives = additives,
     )
 }

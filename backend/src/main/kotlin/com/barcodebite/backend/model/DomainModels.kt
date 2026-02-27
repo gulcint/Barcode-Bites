@@ -25,6 +25,8 @@ data class ProductRecord(
     val name: String,
     val brand: String,
     val nutrition: NutritionValues,
+    val ingredients: String = "",
+    val additives: List<String> = emptyList(),
 )
 
 data class UserRecord(
@@ -37,5 +39,7 @@ data class AnalysisResult(
     val barcode: String,
     val score: Int,
     val grade: String,
+    val cleanLabelScore: Int,
+    val cleanLabelVerdict: String,
     val summary: String,
 )
