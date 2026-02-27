@@ -1,6 +1,7 @@
 package com.barcodebite.backend.routes
 
 import com.barcodebite.backend.model.ErrorResponse
+import com.barcodebite.backend.service.AnalysisService
 import io.ktor.http.HttpStatusCode
 import io.ktor.server.application.call
 import io.ktor.server.request.receive
@@ -23,7 +24,7 @@ data class AnalysisResponse(
     val summary: String,
 )
 
-fun Route.analysisRoutes() {
+fun Route.analysisRoutes(analysisService: AnalysisService) {
     route("/analysis") {
         post {
             val request = call.receive<AnalysisRequest>()
@@ -32,21 +33,13 @@ fun Route.analysisRoutes() {
                 return@post
             }
 
-            val score = 68
-            val grade = when {
-                score >= 85 -> "A"
-                score >= 70 -> "B"
-                score >= 55 -> "C"
-                score >= 40 -> "D"
-                else -> "E"
-            }
-
+            val result = analysisService.analyze(request.barcode)
             call.respond(
                 AnalysisResponse(
-                    barcode = request.barcode,
-                    score = score,
-                    grade = grade,
-                    summary = "Preliminary analysis for phase 1.",
+                    barcode = result.barcode,
+                    score = result.score,
+                    grade = result.grade,
+                    summary = result.summary,
                 ),
             )
         }
