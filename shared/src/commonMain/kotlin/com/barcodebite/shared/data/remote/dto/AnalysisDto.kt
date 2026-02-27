@@ -11,6 +11,8 @@ data class AnalysisDto(
     val summary: String,
     val cleanLabelScore: Int = 0,
     val cleanLabelVerdict: String = "Unknown",
+    val isJunkFood: Boolean = false,
+    val junkFoodReasons: List<String> = emptyList(),
 )
 
 fun AnalysisDto.toDomain(): NutritionScore = NutritionScore(
@@ -19,4 +21,6 @@ fun AnalysisDto.toDomain(): NutritionScore = NutritionScore(
     reason = summary,
     cleanLabelScore = cleanLabelScore,
     cleanLabelVerdict = cleanLabelVerdict,
+    isJunkFood = isJunkFood,
+    junkFoodReasons = junkFoodReasons,
 )

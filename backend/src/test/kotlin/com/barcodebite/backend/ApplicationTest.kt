@@ -17,6 +17,8 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.boolean
+import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 
@@ -143,6 +145,10 @@ class ApplicationTest {
         assertEquals(barcode, analysisJson["barcode"]?.jsonPrimitive?.content)
         assertEquals(25, analysisJson["cleanLabelScore"]?.jsonPrimitive?.content?.toInt())
         assertEquals("Ultra-Processed", analysisJson["cleanLabelVerdict"]?.jsonPrimitive?.content)
+        assertEquals(true, analysisJson["isJunkFood"]?.jsonPrimitive?.boolean)
+        val junkFoodReasons = analysisJson["junkFoodReasons"]?.jsonArray?.map { it.jsonPrimitive.content } ?: emptyList()
+        assertTrue(junkFoodReasons.isNotEmpty())
+        assertTrue(junkFoodReasons.any { it.contains("sugar", ignoreCase = true) })
 
         val healthyBarcode = "8690504999999"
         val healthyCreate = client.post("/v1/products") {
@@ -178,5 +184,8 @@ class ApplicationTest {
         val healthyAnalysisJson = json.parseToJsonElement(healthyAnalysis.bodyAsText()).jsonObject
         assertEquals(93, healthyAnalysisJson["cleanLabelScore"]?.jsonPrimitive?.content?.toInt())
         assertEquals("Excellent", healthyAnalysisJson["cleanLabelVerdict"]?.jsonPrimitive?.content)
+        assertEquals(false, healthyAnalysisJson["isJunkFood"]?.jsonPrimitive?.boolean)
+        val healthyReasons = healthyAnalysisJson["junkFoodReasons"]?.jsonArray?.map { it.jsonPrimitive.content } ?: emptyList()
+        assertTrue(healthyReasons.isEmpty())
     }
 }

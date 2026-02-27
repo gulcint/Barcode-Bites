@@ -139,6 +139,21 @@ fun ProductResultScreen(
                     style = MaterialTheme.typography.titleSmall,
                     modifier = Modifier.padding(top = 10.dp),
                 )
+                if (data.score.isJunkFood) {
+                    Text(
+                        text = "Junk Food Uyarisi",
+                        color = MaterialTheme.colorScheme.error,
+                        style = MaterialTheme.typography.titleSmall,
+                        modifier = Modifier.padding(top = 10.dp),
+                    )
+                    data.score.junkFoodReasons.forEach { reason ->
+                        Text(
+                            text = "- $reason",
+                            style = MaterialTheme.typography.bodySmall,
+                            modifier = Modifier.padding(top = 2.dp),
+                        )
+                    }
+                }
                 NutritionChart(
                     nutrition = data.product.nutrition,
                     grade = data.score.grade,

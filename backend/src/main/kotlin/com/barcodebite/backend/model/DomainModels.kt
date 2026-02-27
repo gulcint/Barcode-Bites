@@ -41,5 +41,7 @@ data class AnalysisResult(
     val grade: String,
     val cleanLabelScore: Int,
     val cleanLabelVerdict: String,
+    val isJunkFood: Boolean,
+    val junkFoodReasons: List<String>,
     val summary: String,
 )
