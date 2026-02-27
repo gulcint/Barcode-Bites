@@ -26,6 +26,8 @@ class ProductService(
             name = "Unknown Product",
             brand = "Unknown Brand",
             nutrition = NutritionValues.empty(),
+            ingredients = "",
+            additives = emptyList(),
         )
     }
 }

@@ -28,7 +28,7 @@ class DatabaseFactory(private val config: DatabaseConfig) {
 
         Database.connect(hikariDataSource)
         transaction {
-            SchemaUtils.create(UsersTable, ProductsTable, ScanHistoryTable, SubscriptionsTable)
+            SchemaUtils.createMissingTablesAndColumns(UsersTable, ProductsTable, ScanHistoryTable, SubscriptionsTable)
         }
     }
 }

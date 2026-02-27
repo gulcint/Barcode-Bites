@@ -66,7 +66,20 @@ fun mapOpenFoodFactsPayload(barcode: String, payload: String, json: Json = Json 
             sugar = nutriments?.sugars100g.asSafeNutrition(),
             salt = nutriments?.salt100g.asSafeNutrition(),
         ),
+        ingredients = product.ingredientsText.orUnknown(defaultValue = ""),
+        additives = product.additivesTags
+            .orEmpty()
+            .mapNotNull(::normalizeAdditiveCode)
+            .distinct(),
     )
+}
+
+private fun normalizeAdditiveCode(raw: String): String? {
+    val normalized = raw
+        .trim()
+        .lowercase()
+        .removePrefix("en:")
+    return normalized.takeIf { it.startsWith("e") && it.length >= 2 }
 }
 
 private fun String?.orUnknown(defaultValue: String): String {
@@ -88,6 +101,10 @@ private data class OpenFoodFactsProduct(
     @SerialName("product_name")
     val productName: String? = null,
     val brands: String? = null,
+    @SerialName("ingredients_text")
+    val ingredientsText: String? = null,
+    @SerialName("additives_tags")
+    val additivesTags: List<String>? = null,
     val nutriments: OpenFoodFactsNutriments? = null,
 )
 

@@ -134,6 +134,11 @@ fun ProductResultScreen(
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.padding(top = 6.dp),
                 )
+                Text(
+                    text = "Clean Label: ${data.score.cleanLabelScore}/100 (${data.score.cleanLabelVerdict})",
+                    style = MaterialTheme.typography.titleSmall,
+                    modifier = Modifier.padding(top = 10.dp),
+                )
                 NutritionChart(
                     nutrition = data.product.nutrition,
                     grade = data.score.grade,

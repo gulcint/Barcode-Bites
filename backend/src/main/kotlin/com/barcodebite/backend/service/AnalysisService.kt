@@ -16,16 +16,26 @@ class AnalysisService(
                 name = "Unknown Product",
                 brand = "Unknown Brand",
                 nutrition = NutritionValues.empty(),
+                ingredients = "",
+                additives = emptyList(),
             ),
         )
 
         val score = nutritionScoringService.calculateScore(product.nutrition)
         val grade = nutritionScoringService.grade(score)
+        val cleanLabelScore = nutritionScoringService.calculateCleanLabelScore(
+            nutrition = product.nutrition,
+            ingredients = product.ingredients,
+            additives = product.additives,
+        )
+        val cleanLabelVerdict = nutritionScoringService.cleanLabelVerdict(cleanLabelScore)
 
         return AnalysisResult(
             barcode = barcode,
             score = score,
             grade = grade,
+            cleanLabelScore = cleanLabelScore,
+            cleanLabelVerdict = cleanLabelVerdict,
             summary = "Calculated from stored nutrition profile.",
         )
     }

@@ -19,6 +19,8 @@ object ProductsTable : Table("products") {
     val fat = double("fat")
     val sugar = double("sugar")
     val salt = double("salt")
+    val ingredients = text("ingredients").default("")
+    val additivesCsv = text("additives_csv").default("")
 
     override val primaryKey = PrimaryKey(barcode)
 }

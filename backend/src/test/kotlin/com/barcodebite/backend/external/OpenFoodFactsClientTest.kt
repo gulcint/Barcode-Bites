@@ -16,6 +16,8 @@ class OpenFoodFactsClientTest {
               "product": {
                 "product_name": "Organic Oat Bar",
                 "brands": "Nature Co, Secondary",
+                "ingredients_text": "Whole oats, Honey, Sea Salt",
+                "additives_tags": ["en:e330", "en:e500"],
                 "nutriments": {
                   "energy-kcal_100g": 380.0,
                   "proteins_100g": 8.5,
@@ -34,6 +36,8 @@ class OpenFoodFactsClientTest {
         assertEquals("8690504012345", product.barcode)
         assertEquals("Organic Oat Bar", product.name)
         assertEquals("Nature Co", product.brand)
+        assertEquals("Whole oats, Honey, Sea Salt", product.ingredients)
+        assertEquals(listOf("e330", "e500"), product.additives)
         assertEquals(380.0, product.nutrition.calories)
         assertEquals(8.5, product.nutrition.protein)
         assertEquals(62.0, product.nutrition.carbohydrates)
@@ -60,6 +64,8 @@ class OpenFoodFactsClientTest {
         assertNotNull(product)
         assertEquals("Unknown Product", product.name)
         assertEquals("Unknown Brand", product.brand)
+        assertEquals("", product.ingredients)
+        assertEquals(emptyList(), product.additives)
         assertEquals(0.0, product.nutrition.calories)
         assertEquals(0.0, product.nutrition.salt)
     }

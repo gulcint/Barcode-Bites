@@ -33,6 +33,8 @@ class ProductRepository {
                 it[fat] = product.nutrition.fat
                 it[sugar] = product.nutrition.sugar
                 it[salt] = product.nutrition.salt
+                it[ingredients] = product.ingredients
+                it[additivesCsv] = toCsv(product.additives)
             }
 
             if (updatedRows == 0) {
@@ -46,6 +48,8 @@ class ProductRepository {
                     it[fat] = product.nutrition.fat
                     it[sugar] = product.nutrition.sugar
                     it[salt] = product.nutrition.salt
+                    it[ingredients] = product.ingredients
+                    it[additivesCsv] = toCsv(product.additives)
                 }
             }
         }
@@ -66,6 +70,22 @@ class ProductRepository {
                 sugar = row[ProductsTable.sugar],
                 salt = row[ProductsTable.salt],
             ),
+            ingredients = row[ProductsTable.ingredients],
+            additives = fromCsv(row[ProductsTable.additivesCsv]),
         )
+    }
+
+    private fun toCsv(values: List<String>): String {
+        return values
+            .map { it.trim() }
+            .filter { it.isNotBlank() }
+            .joinToString(",")
+    }
+
+    private fun fromCsv(value: String): List<String> {
+        return value
+            .split(',')
+            .map { it.trim() }
+            .filter { it.isNotBlank() }
     }
 }

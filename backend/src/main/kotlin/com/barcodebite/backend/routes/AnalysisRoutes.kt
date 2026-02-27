@@ -21,6 +21,8 @@ data class AnalysisResponse(
     val barcode: String,
     val score: Int,
     val grade: String,
+    val cleanLabelScore: Int,
+    val cleanLabelVerdict: String,
     val summary: String,
 )
 
@@ -39,6 +41,8 @@ fun Route.analysisRoutes(analysisService: AnalysisService) {
                     barcode = result.barcode,
                     score = result.score,
                     grade = result.grade,
+                    cleanLabelScore = result.cleanLabelScore,
+                    cleanLabelVerdict = result.cleanLabelVerdict,
                     summary = result.summary,
                 ),
             )
