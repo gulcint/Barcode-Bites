@@ -6,4 +6,6 @@ data class NutritionScore(
     val reason: String,
     val cleanLabelScore: Int = 0,
     val cleanLabelVerdict: String = "Unknown",
+    val isJunkFood: Boolean = false,
+    val junkFoodReasons: List<String> = emptyList(),
 )
