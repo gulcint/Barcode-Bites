@@ -29,6 +29,11 @@ class AnalysisService(
             additives = product.additives,
         )
         val cleanLabelVerdict = nutritionScoringService.cleanLabelVerdict(cleanLabelScore)
+        val junkFoodAssessment = nutritionScoringService.detectJunkFood(
+            nutrition = product.nutrition,
+            cleanLabelScore = cleanLabelScore,
+            additives = product.additives,
+        )
 
         return AnalysisResult(
             barcode = barcode,
@@ -36,6 +41,8 @@ class AnalysisService(
             grade = grade,
             cleanLabelScore = cleanLabelScore,
             cleanLabelVerdict = cleanLabelVerdict,
+            isJunkFood = junkFoodAssessment.isJunkFood,
+            junkFoodReasons = junkFoodAssessment.reasons,
             summary = "Calculated from stored nutrition profile.",
         )
     }

@@ -2,6 +2,11 @@ package com.barcodebite.backend.service
 
 import com.barcodebite.backend.model.NutritionValues
 
+data class JunkFoodAssessment(
+    val isJunkFood: Boolean,
+    val reasons: List<String>,
+)
+
 class NutritionScoringService {
     fun calculateScore(nutrition: NutritionValues): Int {
         val penalty = (nutrition.sugar * 2.5) + (nutrition.salt * 20.0) + (nutrition.calories * 0.04)
@@ -52,6 +57,43 @@ class NutritionScoringService {
             score >= 40 -> "Poor"
             else -> "Ultra-Processed"
         }
+    }
+
+    fun detectJunkFood(
+        nutrition: NutritionValues,
+        cleanLabelScore: Int,
+        additives: List<String>,
+    ): JunkFoodAssessment {
+        val normalizedAdditives = additives
+            .map { it.trim().lowercase() }
+            .filter { it.isNotBlank() }
+
+        val reasons = mutableListOf<String>()
+
+        if (nutrition.sugar >= 20.0) {
+            reasons += "High sugar content"
+        }
+        if (nutrition.salt >= 1.0) {
+            reasons += "High salt content"
+        }
+        if (nutrition.calories >= 400.0) {
+            reasons += "High calorie density"
+        }
+        if (cleanLabelScore < 45) {
+            reasons += "Low clean label score"
+        }
+        if (normalizedAdditives.size >= 3) {
+            reasons += "Multiple additives"
+        }
+        if (normalizedAdditives.any { it in riskyAdditives }) {
+            reasons += "Contains risky additives"
+        }
+
+        val isJunk = reasons.size >= 2
+        return JunkFoodAssessment(
+            isJunkFood = isJunk,
+            reasons = if (isJunk) reasons.distinct() else emptyList(),
+        )
     }
 
     private companion object {

@@ -23,6 +23,8 @@ data class AnalysisResponse(
     val grade: String,
     val cleanLabelScore: Int,
     val cleanLabelVerdict: String,
+    val isJunkFood: Boolean,
+    val junkFoodReasons: List<String>,
     val summary: String,
 )
 
@@ -43,6 +45,8 @@ fun Route.analysisRoutes(analysisService: AnalysisService) {
                     grade = result.grade,
                     cleanLabelScore = result.cleanLabelScore,
                     cleanLabelVerdict = result.cleanLabelVerdict,
+                    isJunkFood = result.isJunkFood,
+                    junkFoodReasons = result.junkFoodReasons,
                     summary = result.summary,
                 ),
             )
