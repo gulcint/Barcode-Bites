@@ -3,6 +3,7 @@ package com.barcodebite.backend.config
 data class AppConfig(
     val database: DatabaseConfig,
     val jwt: JwtConfig,
+    val openFoodFacts: OpenFoodFactsConfig,
 ) {
     companion object {
         fun fromEnvironment(): AppConfig {
@@ -15,6 +16,10 @@ data class AppConfig(
                 databaseUrl.startsWith("jdbc:h2:") -> "org.h2.Driver"
                 else -> "org.postgresql.Driver"
             }
+
+            val offBaseUrl = (System.getenv("OPEN_FOOD_FACTS_URL") ?: "https://world.openfoodfacts.org/api/v2")
+                .trim()
+                .trimEnd('/')
 
             return AppConfig(
                 database = DatabaseConfig(
@@ -29,6 +34,11 @@ data class AppConfig(
                     issuer = System.getenv("JWT_ISSUER") ?: "barcodebite.app",
                     audience = System.getenv("JWT_AUDIENCE") ?: "barcodebite-users",
                     expiresInHours = (System.getenv("JWT_EXPIRES_IN_HOURS") ?: "24").toLongOrNull() ?: 24,
+                ),
+                openFoodFacts = OpenFoodFactsConfig(
+                    baseUrl = offBaseUrl,
+                    userAgent = System.getenv("OPEN_FOOD_FACTS_USER_AGENT") ?: "BarcodeBites/1.0 (contact@barcodebite.app)",
+                    timeoutMillis = (System.getenv("OPEN_FOOD_FACTS_TIMEOUT_MS") ?: "5000").toLongOrNull() ?: 5000L,
                 ),
             )
         }
@@ -48,4 +58,10 @@ data class JwtConfig(
     val issuer: String,
     val audience: String,
     val expiresInHours: Long,
+)
+
+data class OpenFoodFactsConfig(
+    val baseUrl: String,
+    val userAgent: String,
+    val timeoutMillis: Long,
 )
