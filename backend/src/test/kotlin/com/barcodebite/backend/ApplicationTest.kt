@@ -3,6 +3,7 @@ package com.barcodebite.backend
 import com.barcodebite.backend.config.AppConfig
 import com.barcodebite.backend.config.DatabaseConfig
 import com.barcodebite.backend.config.JwtConfig
+import com.barcodebite.backend.config.OpenFoodFactsConfig
 import io.ktor.client.request.get
 import io.ktor.client.request.post
 import io.ktor.client.request.setBody
@@ -36,6 +37,11 @@ class ApplicationTest {
                 issuer = "test.barcodebite",
                 audience = "test-users",
                 expiresInHours = 2,
+            ),
+            openFoodFacts = OpenFoodFactsConfig(
+                baseUrl = "http://127.0.0.1:1/api/v2",
+                userAgent = "BarcodeBites-Test/1.0",
+                timeoutMillis = 25,
             ),
         )
     }
