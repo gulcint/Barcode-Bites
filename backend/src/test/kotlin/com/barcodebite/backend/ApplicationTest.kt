@@ -112,6 +112,8 @@ class ApplicationTest {
                   "barcode":"$barcode",
                   "name":"Sugary Snack",
                   "brand":"Snack Co",
+                  "ingredients":"Sugar, Palm Oil, Wheat Flour, Glucose Syrup, Emulsifier, Flavoring, Color",
+                  "additives":["e330","e621","e950"],
                   "nutrition":{
                     "calories":450.0,
                     "protein":5.0,
@@ -139,5 +141,42 @@ class ApplicationTest {
         val analysisJson = json.parseToJsonElement(response.bodyAsText()).jsonObject
         assertEquals("E", analysisJson["grade"]?.jsonPrimitive?.content)
         assertEquals(barcode, analysisJson["barcode"]?.jsonPrimitive?.content)
+        assertEquals(25, analysisJson["cleanLabelScore"]?.jsonPrimitive?.content?.toInt())
+        assertEquals("Ultra-Processed", analysisJson["cleanLabelVerdict"]?.jsonPrimitive?.content)
+
+        val healthyBarcode = "8690504999999"
+        val healthyCreate = client.post("/v1/products") {
+            contentType(ContentType.Application.Json)
+            setBody(
+                """
+                {
+                  "barcode":"$healthyBarcode",
+                  "name":"Pure Oat Mix",
+                  "brand":"Nature Co",
+                  "ingredients":"Whole oats, Hazelnut, Honey",
+                  "additives":[],
+                  "nutrition":{
+                    "calories":320.0,
+                    "protein":12.0,
+                    "carbohydrates":51.0,
+                    "fat":8.0,
+                    "sugar":4.0,
+                    "salt":0.1
+                  }
+                }
+                """.trimIndent(),
+            )
+        }
+        assertEquals(HttpStatusCode.Created, healthyCreate.status)
+
+        val healthyAnalysis = client.post("/v1/analysis") {
+            contentType(ContentType.Application.Json)
+            setBody("""{"barcode":"$healthyBarcode"}""")
+        }
+
+        assertEquals(HttpStatusCode.OK, healthyAnalysis.status)
+        val healthyAnalysisJson = json.parseToJsonElement(healthyAnalysis.bodyAsText()).jsonObject
+        assertEquals(93, healthyAnalysisJson["cleanLabelScore"]?.jsonPrimitive?.content?.toInt())
+        assertEquals("Excellent", healthyAnalysisJson["cleanLabelVerdict"]?.jsonPrimitive?.content)
     }
 }
