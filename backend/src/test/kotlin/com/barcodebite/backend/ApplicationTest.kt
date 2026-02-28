@@ -132,7 +132,13 @@ class ApplicationTest {
 
         val productResponse = client.get("/v1/products/$barcode")
         assertEquals(HttpStatusCode.OK, productResponse.status)
-        assertTrue(productResponse.bodyAsText().contains("Sugary Snack"))
+        val productJson = json.parseToJsonElement(productResponse.bodyAsText()).jsonObject
+        assertEquals("Sugary Snack", productJson["name"]?.jsonPrimitive?.content)
+        val additiveJson = productJson["additives"]?.jsonArray ?: error("missing additives")
+        assertEquals(3, additiveJson.size)
+        assertEquals("e621", additiveJson[1].jsonObject["code"]?.jsonPrimitive?.content)
+        assertEquals("Monosodium glutamate", additiveJson[1].jsonObject["name"]?.jsonPrimitive?.content)
+        assertEquals("High", additiveJson[1].jsonObject["riskLevel"]?.jsonPrimitive?.content)
 
         val response = client.post("/v1/analysis") {
             contentType(ContentType.Application.Json)
