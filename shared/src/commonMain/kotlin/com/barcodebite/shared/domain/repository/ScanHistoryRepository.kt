@@ -6,4 +6,6 @@ interface ScanHistoryRepository {
     suspend fun getRecent(limit: Int = 20): List<ScanResult>
 
     suspend fun save(result: ScanResult)
+
+    suspend fun clear()
 }
