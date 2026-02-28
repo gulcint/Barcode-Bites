@@ -1,0 +1,701 @@
+code,name,riskLevel,description
+e100,Color additive E100,Review Needed,Seed catalog entry for E100 pending detailed additive review.
+e101,Color additive E101,Review Needed,Seed catalog entry for E101 pending detailed additive review.
+e102,Tartrazine,High,Synthetic yellow color additive linked to sensitivity concerns.
+e103,Color additive E103,Review Needed,Seed catalog entry for E103 pending detailed additive review.
+e104,Color additive E104,Review Needed,Seed catalog entry for E104 pending detailed additive review.
+e105,Color additive E105,Review Needed,Seed catalog entry for E105 pending detailed additive review.
+e106,Color additive E106,Review Needed,Seed catalog entry for E106 pending detailed additive review.
+e107,Color additive E107,Review Needed,Seed catalog entry for E107 pending detailed additive review.
+e108,Color additive E108,Review Needed,Seed catalog entry for E108 pending detailed additive review.
+e109,Color additive E109,Review Needed,Seed catalog entry for E109 pending detailed additive review.
+e110,Sunset Yellow FCF,High,Synthetic orange yellow color additive flagged for sensitivity review.
+e111,Color additive E111,Review Needed,Seed catalog entry for E111 pending detailed additive review.
+e112,Color additive E112,Review Needed,Seed catalog entry for E112 pending detailed additive review.
+e113,Color additive E113,Review Needed,Seed catalog entry for E113 pending detailed additive review.
+e114,Color additive E114,Review Needed,Seed catalog entry for E114 pending detailed additive review.
+e115,Color additive E115,Review Needed,Seed catalog entry for E115 pending detailed additive review.
+e116,Color additive E116,Review Needed,Seed catalog entry for E116 pending detailed additive review.
+e117,Color additive E117,Review Needed,Seed catalog entry for E117 pending detailed additive review.
+e118,Color additive E118,Review Needed,Seed catalog entry for E118 pending detailed additive review.
+e119,Color additive E119,Review Needed,Seed catalog entry for E119 pending detailed additive review.
+e120,Color additive E120,Review Needed,Seed catalog entry for E120 pending detailed additive review.
+e121,Color additive E121,Review Needed,Seed catalog entry for E121 pending detailed additive review.
+e122,Color additive E122,Review Needed,Seed catalog entry for E122 pending detailed additive review.
+e123,Color additive E123,Review Needed,Seed catalog entry for E123 pending detailed additive review.
+e124,Ponceau 4R,High,Synthetic red color additive often reviewed for behavioral sensitivity.
+e125,Color additive E125,Review Needed,Seed catalog entry for E125 pending detailed additive review.
+e126,Color additive E126,Review Needed,Seed catalog entry for E126 pending detailed additive review.
+e127,Color additive E127,Review Needed,Seed catalog entry for E127 pending detailed additive review.
+e128,Color additive E128,Review Needed,Seed catalog entry for E128 pending detailed additive review.
+e129,Allura Red AC,High,Synthetic red color additive with sensitivity concerns in some consumers.
+e130,Color additive E130,Review Needed,Seed catalog entry for E130 pending detailed additive review.
+e131,Color additive E131,Review Needed,Seed catalog entry for E131 pending detailed additive review.
+e132,Color additive E132,Review Needed,Seed catalog entry for E132 pending detailed additive review.
+e133,Color additive E133,Review Needed,Seed catalog entry for E133 pending detailed additive review.
+e134,Color additive E134,Review Needed,Seed catalog entry for E134 pending detailed additive review.
+e135,Color additive E135,Review Needed,Seed catalog entry for E135 pending detailed additive review.
+e136,Color additive E136,Review Needed,Seed catalog entry for E136 pending detailed additive review.
+e137,Color additive E137,Review Needed,Seed catalog entry for E137 pending detailed additive review.
+e138,Color additive E138,Review Needed,Seed catalog entry for E138 pending detailed additive review.
+e139,Color additive E139,Review Needed,Seed catalog entry for E139 pending detailed additive review.
+e140,Color additive E140,Review Needed,Seed catalog entry for E140 pending detailed additive review.
+e141,Color additive E141,Review Needed,Seed catalog entry for E141 pending detailed additive review.
+e142,Color additive E142,Review Needed,Seed catalog entry for E142 pending detailed additive review.
+e143,Color additive E143,Review Needed,Seed catalog entry for E143 pending detailed additive review.
+e144,Color additive E144,Review Needed,Seed catalog entry for E144 pending detailed additive review.
+e145,Color additive E145,Review Needed,Seed catalog entry for E145 pending detailed additive review.
+e146,Color additive E146,Review Needed,Seed catalog entry for E146 pending detailed additive review.
+e147,Color additive E147,Review Needed,Seed catalog entry for E147 pending detailed additive review.
+e148,Color additive E148,Review Needed,Seed catalog entry for E148 pending detailed additive review.
+e149,Color additive E149,Review Needed,Seed catalog entry for E149 pending detailed additive review.
+e150,Color additive E150,Review Needed,Seed catalog entry for E150 pending detailed additive review.
+e151,Color additive E151,Review Needed,Seed catalog entry for E151 pending detailed additive review.
+e152,Color additive E152,Review Needed,Seed catalog entry for E152 pending detailed additive review.
+e153,Color additive E153,Review Needed,Seed catalog entry for E153 pending detailed additive review.
+e154,Color additive E154,Review Needed,Seed catalog entry for E154 pending detailed additive review.
+e155,Color additive E155,Review Needed,Seed catalog entry for E155 pending detailed additive review.
+e156,Color additive E156,Review Needed,Seed catalog entry for E156 pending detailed additive review.
+e157,Color additive E157,Review Needed,Seed catalog entry for E157 pending detailed additive review.
+e158,Color additive E158,Review Needed,Seed catalog entry for E158 pending detailed additive review.
+e159,Color additive E159,Review Needed,Seed catalog entry for E159 pending detailed additive review.
+e160,Color additive E160,Review Needed,Seed catalog entry for E160 pending detailed additive review.
+e161,Color additive E161,Review Needed,Seed catalog entry for E161 pending detailed additive review.
+e162,Color additive E162,Review Needed,Seed catalog entry for E162 pending detailed additive review.
+e163,Color additive E163,Review Needed,Seed catalog entry for E163 pending detailed additive review.
+e164,Color additive E164,Review Needed,Seed catalog entry for E164 pending detailed additive review.
+e165,Color additive E165,Review Needed,Seed catalog entry for E165 pending detailed additive review.
+e166,Color additive E166,Review Needed,Seed catalog entry for E166 pending detailed additive review.
+e167,Color additive E167,Review Needed,Seed catalog entry for E167 pending detailed additive review.
+e168,Color additive E168,Review Needed,Seed catalog entry for E168 pending detailed additive review.
+e169,Color additive E169,Review Needed,Seed catalog entry for E169 pending detailed additive review.
+e170,Color additive E170,Review Needed,Seed catalog entry for E170 pending detailed additive review.
+e171,Color additive E171,Review Needed,Seed catalog entry for E171 pending detailed additive review.
+e172,Color additive E172,Review Needed,Seed catalog entry for E172 pending detailed additive review.
+e173,Color additive E173,Review Needed,Seed catalog entry for E173 pending detailed additive review.
+e174,Color additive E174,Review Needed,Seed catalog entry for E174 pending detailed additive review.
+e175,Color additive E175,Review Needed,Seed catalog entry for E175 pending detailed additive review.
+e176,Color additive E176,Review Needed,Seed catalog entry for E176 pending detailed additive review.
+e177,Color additive E177,Review Needed,Seed catalog entry for E177 pending detailed additive review.
+e178,Color additive E178,Review Needed,Seed catalog entry for E178 pending detailed additive review.
+e179,Color additive E179,Review Needed,Seed catalog entry for E179 pending detailed additive review.
+e180,Color additive E180,Review Needed,Seed catalog entry for E180 pending detailed additive review.
+e181,Color additive E181,Review Needed,Seed catalog entry for E181 pending detailed additive review.
+e182,Color additive E182,Review Needed,Seed catalog entry for E182 pending detailed additive review.
+e183,Color additive E183,Review Needed,Seed catalog entry for E183 pending detailed additive review.
+e184,Color additive E184,Review Needed,Seed catalog entry for E184 pending detailed additive review.
+e185,Color additive E185,Review Needed,Seed catalog entry for E185 pending detailed additive review.
+e186,Color additive E186,Review Needed,Seed catalog entry for E186 pending detailed additive review.
+e187,Color additive E187,Review Needed,Seed catalog entry for E187 pending detailed additive review.
+e188,Color additive E188,Review Needed,Seed catalog entry for E188 pending detailed additive review.
+e189,Color additive E189,Review Needed,Seed catalog entry for E189 pending detailed additive review.
+e190,Color additive E190,Review Needed,Seed catalog entry for E190 pending detailed additive review.
+e191,Color additive E191,Review Needed,Seed catalog entry for E191 pending detailed additive review.
+e192,Color additive E192,Review Needed,Seed catalog entry for E192 pending detailed additive review.
+e193,Color additive E193,Review Needed,Seed catalog entry for E193 pending detailed additive review.
+e194,Color additive E194,Review Needed,Seed catalog entry for E194 pending detailed additive review.
+e195,Color additive E195,Review Needed,Seed catalog entry for E195 pending detailed additive review.
+e196,Color additive E196,Review Needed,Seed catalog entry for E196 pending detailed additive review.
+e197,Color additive E197,Review Needed,Seed catalog entry for E197 pending detailed additive review.
+e198,Color additive E198,Review Needed,Seed catalog entry for E198 pending detailed additive review.
+e199,Color additive E199,Review Needed,Seed catalog entry for E199 pending detailed additive review.
+e200,Preservative E200,Review Needed,Seed catalog entry for E200 pending detailed additive review.
+e201,Preservative E201,Review Needed,Seed catalog entry for E201 pending detailed additive review.
+e202,Preservative E202,Review Needed,Seed catalog entry for E202 pending detailed additive review.
+e203,Preservative E203,Review Needed,Seed catalog entry for E203 pending detailed additive review.
+e204,Preservative E204,Review Needed,Seed catalog entry for E204 pending detailed additive review.
+e205,Preservative E205,Review Needed,Seed catalog entry for E205 pending detailed additive review.
+e206,Preservative E206,Review Needed,Seed catalog entry for E206 pending detailed additive review.
+e207,Preservative E207,Review Needed,Seed catalog entry for E207 pending detailed additive review.
+e208,Preservative E208,Review Needed,Seed catalog entry for E208 pending detailed additive review.
+e209,Preservative E209,Review Needed,Seed catalog entry for E209 pending detailed additive review.
+e210,Preservative E210,Review Needed,Seed catalog entry for E210 pending detailed additive review.
+e211,Sodium benzoate,Moderate,Preservative commonly used in acidic drinks and sauces.
+e212,Preservative E212,Review Needed,Seed catalog entry for E212 pending detailed additive review.
+e213,Preservative E213,Review Needed,Seed catalog entry for E213 pending detailed additive review.
+e214,Preservative E214,Review Needed,Seed catalog entry for E214 pending detailed additive review.
+e215,Preservative E215,Review Needed,Seed catalog entry for E215 pending detailed additive review.
+e216,Preservative E216,Review Needed,Seed catalog entry for E216 pending detailed additive review.
+e217,Preservative E217,Review Needed,Seed catalog entry for E217 pending detailed additive review.
+e218,Preservative E218,Review Needed,Seed catalog entry for E218 pending detailed additive review.
+e219,Preservative E219,Review Needed,Seed catalog entry for E219 pending detailed additive review.
+e220,Sulphur dioxide,High,Sulphite preservative that can trigger reactions in sensitive people.
+e221,Preservative E221,Review Needed,Seed catalog entry for E221 pending detailed additive review.
+e222,Preservative E222,Review Needed,Seed catalog entry for E222 pending detailed additive review.
+e223,Preservative E223,Review Needed,Seed catalog entry for E223 pending detailed additive review.
+e224,Preservative E224,Review Needed,Seed catalog entry for E224 pending detailed additive review.
+e225,Preservative E225,Review Needed,Seed catalog entry for E225 pending detailed additive review.
+e226,Preservative E226,Review Needed,Seed catalog entry for E226 pending detailed additive review.
+e227,Preservative E227,Review Needed,Seed catalog entry for E227 pending detailed additive review.
+e228,Preservative E228,Review Needed,Seed catalog entry for E228 pending detailed additive review.
+e229,Preservative E229,Review Needed,Seed catalog entry for E229 pending detailed additive review.
+e230,Preservative E230,Review Needed,Seed catalog entry for E230 pending detailed additive review.
+e231,Preservative E231,Review Needed,Seed catalog entry for E231 pending detailed additive review.
+e232,Preservative E232,Review Needed,Seed catalog entry for E232 pending detailed additive review.
+e233,Preservative E233,Review Needed,Seed catalog entry for E233 pending detailed additive review.
+e234,Preservative E234,Review Needed,Seed catalog entry for E234 pending detailed additive review.
+e235,Preservative E235,Review Needed,Seed catalog entry for E235 pending detailed additive review.
+e236,Preservative E236,Review Needed,Seed catalog entry for E236 pending detailed additive review.
+e237,Preservative E237,Review Needed,Seed catalog entry for E237 pending detailed additive review.
+e238,Preservative E238,Review Needed,Seed catalog entry for E238 pending detailed additive review.
+e239,Preservative E239,Review Needed,Seed catalog entry for E239 pending detailed additive review.
+e240,Preservative E240,Review Needed,Seed catalog entry for E240 pending detailed additive review.
+e241,Preservative E241,Review Needed,Seed catalog entry for E241 pending detailed additive review.
+e242,Preservative E242,Review Needed,Seed catalog entry for E242 pending detailed additive review.
+e243,Preservative E243,Review Needed,Seed catalog entry for E243 pending detailed additive review.
+e244,Preservative E244,Review Needed,Seed catalog entry for E244 pending detailed additive review.
+e245,Preservative E245,Review Needed,Seed catalog entry for E245 pending detailed additive review.
+e246,Preservative E246,Review Needed,Seed catalog entry for E246 pending detailed additive review.
+e247,Preservative E247,Review Needed,Seed catalog entry for E247 pending detailed additive review.
+e248,Preservative E248,Review Needed,Seed catalog entry for E248 pending detailed additive review.
+e249,Preservative E249,Review Needed,Seed catalog entry for E249 pending detailed additive review.
+e250,Preservative E250,Review Needed,Seed catalog entry for E250 pending detailed additive review.
+e251,Preservative E251,Review Needed,Seed catalog entry for E251 pending detailed additive review.
+e252,Preservative E252,Review Needed,Seed catalog entry for E252 pending detailed additive review.
+e253,Preservative E253,Review Needed,Seed catalog entry for E253 pending detailed additive review.
+e254,Preservative E254,Review Needed,Seed catalog entry for E254 pending detailed additive review.
+e255,Preservative E255,Review Needed,Seed catalog entry for E255 pending detailed additive review.
+e256,Preservative E256,Review Needed,Seed catalog entry for E256 pending detailed additive review.
+e257,Preservative E257,Review Needed,Seed catalog entry for E257 pending detailed additive review.
+e258,Preservative E258,Review Needed,Seed catalog entry for E258 pending detailed additive review.
+e259,Preservative E259,Review Needed,Seed catalog entry for E259 pending detailed additive review.
+e260,Preservative E260,Review Needed,Seed catalog entry for E260 pending detailed additive review.
+e261,Preservative E261,Review Needed,Seed catalog entry for E261 pending detailed additive review.
+e262,Preservative E262,Review Needed,Seed catalog entry for E262 pending detailed additive review.
+e263,Preservative E263,Review Needed,Seed catalog entry for E263 pending detailed additive review.
+e264,Preservative E264,Review Needed,Seed catalog entry for E264 pending detailed additive review.
+e265,Preservative E265,Review Needed,Seed catalog entry for E265 pending detailed additive review.
+e266,Preservative E266,Review Needed,Seed catalog entry for E266 pending detailed additive review.
+e267,Preservative E267,Review Needed,Seed catalog entry for E267 pending detailed additive review.
+e268,Preservative E268,Review Needed,Seed catalog entry for E268 pending detailed additive review.
+e269,Preservative E269,Review Needed,Seed catalog entry for E269 pending detailed additive review.
+e270,Preservative E270,Review Needed,Seed catalog entry for E270 pending detailed additive review.
+e271,Preservative E271,Review Needed,Seed catalog entry for E271 pending detailed additive review.
+e272,Preservative E272,Review Needed,Seed catalog entry for E272 pending detailed additive review.
+e273,Preservative E273,Review Needed,Seed catalog entry for E273 pending detailed additive review.
+e274,Preservative E274,Review Needed,Seed catalog entry for E274 pending detailed additive review.
+e275,Preservative E275,Review Needed,Seed catalog entry for E275 pending detailed additive review.
+e276,Preservative E276,Review Needed,Seed catalog entry for E276 pending detailed additive review.
+e277,Preservative E277,Review Needed,Seed catalog entry for E277 pending detailed additive review.
+e278,Preservative E278,Review Needed,Seed catalog entry for E278 pending detailed additive review.
+e279,Preservative E279,Review Needed,Seed catalog entry for E279 pending detailed additive review.
+e280,Preservative E280,Review Needed,Seed catalog entry for E280 pending detailed additive review.
+e281,Preservative E281,Review Needed,Seed catalog entry for E281 pending detailed additive review.
+e282,Preservative E282,Review Needed,Seed catalog entry for E282 pending detailed additive review.
+e283,Preservative E283,Review Needed,Seed catalog entry for E283 pending detailed additive review.
+e284,Preservative E284,Review Needed,Seed catalog entry for E284 pending detailed additive review.
+e285,Preservative E285,Review Needed,Seed catalog entry for E285 pending detailed additive review.
+e286,Preservative E286,Review Needed,Seed catalog entry for E286 pending detailed additive review.
+e287,Preservative E287,Review Needed,Seed catalog entry for E287 pending detailed additive review.
+e288,Preservative E288,Review Needed,Seed catalog entry for E288 pending detailed additive review.
+e289,Preservative E289,Review Needed,Seed catalog entry for E289 pending detailed additive review.
+e290,Preservative E290,Review Needed,Seed catalog entry for E290 pending detailed additive review.
+e291,Preservative E291,Review Needed,Seed catalog entry for E291 pending detailed additive review.
+e292,Preservative E292,Review Needed,Seed catalog entry for E292 pending detailed additive review.
+e293,Preservative E293,Review Needed,Seed catalog entry for E293 pending detailed additive review.
+e294,Preservative E294,Review Needed,Seed catalog entry for E294 pending detailed additive review.
+e295,Preservative E295,Review Needed,Seed catalog entry for E295 pending detailed additive review.
+e296,Preservative E296,Review Needed,Seed catalog entry for E296 pending detailed additive review.
+e297,Preservative E297,Review Needed,Seed catalog entry for E297 pending detailed additive review.
+e298,Preservative E298,Review Needed,Seed catalog entry for E298 pending detailed additive review.
+e299,Preservative E299,Review Needed,Seed catalog entry for E299 pending detailed additive review.
+e300,Antioxidant and acidity regulator E300,Review Needed,Seed catalog entry for E300 pending detailed additive review.
+e301,Antioxidant and acidity regulator E301,Review Needed,Seed catalog entry for E301 pending detailed additive review.
+e302,Antioxidant and acidity regulator E302,Review Needed,Seed catalog entry for E302 pending detailed additive review.
+e303,Antioxidant and acidity regulator E303,Review Needed,Seed catalog entry for E303 pending detailed additive review.
+e304,Antioxidant and acidity regulator E304,Review Needed,Seed catalog entry for E304 pending detailed additive review.
+e305,Antioxidant and acidity regulator E305,Review Needed,Seed catalog entry for E305 pending detailed additive review.
+e306,Antioxidant and acidity regulator E306,Review Needed,Seed catalog entry for E306 pending detailed additive review.
+e307,Antioxidant and acidity regulator E307,Review Needed,Seed catalog entry for E307 pending detailed additive review.
+e308,Antioxidant and acidity regulator E308,Review Needed,Seed catalog entry for E308 pending detailed additive review.
+e309,Antioxidant and acidity regulator E309,Review Needed,Seed catalog entry for E309 pending detailed additive review.
+e310,Antioxidant and acidity regulator E310,Review Needed,Seed catalog entry for E310 pending detailed additive review.
+e311,Antioxidant and acidity regulator E311,Review Needed,Seed catalog entry for E311 pending detailed additive review.
+e312,Antioxidant and acidity regulator E312,Review Needed,Seed catalog entry for E312 pending detailed additive review.
+e313,Antioxidant and acidity regulator E313,Review Needed,Seed catalog entry for E313 pending detailed additive review.
+e314,Antioxidant and acidity regulator E314,Review Needed,Seed catalog entry for E314 pending detailed additive review.
+e315,Antioxidant and acidity regulator E315,Review Needed,Seed catalog entry for E315 pending detailed additive review.
+e316,Antioxidant and acidity regulator E316,Review Needed,Seed catalog entry for E316 pending detailed additive review.
+e317,Antioxidant and acidity regulator E317,Review Needed,Seed catalog entry for E317 pending detailed additive review.
+e318,Antioxidant and acidity regulator E318,Review Needed,Seed catalog entry for E318 pending detailed additive review.
+e319,Antioxidant and acidity regulator E319,Review Needed,Seed catalog entry for E319 pending detailed additive review.
+e320,Antioxidant and acidity regulator E320,Review Needed,Seed catalog entry for E320 pending detailed additive review.
+e321,Antioxidant and acidity regulator E321,Review Needed,Seed catalog entry for E321 pending detailed additive review.
+e322,Lecithins,Low,Emulsifier commonly sourced from sunflower or soy.
+e323,Antioxidant and acidity regulator E323,Review Needed,Seed catalog entry for E323 pending detailed additive review.
+e324,Antioxidant and acidity regulator E324,Review Needed,Seed catalog entry for E324 pending detailed additive review.
+e325,Antioxidant and acidity regulator E325,Review Needed,Seed catalog entry for E325 pending detailed additive review.
+e326,Antioxidant and acidity regulator E326,Review Needed,Seed catalog entry for E326 pending detailed additive review.
+e327,Antioxidant and acidity regulator E327,Review Needed,Seed catalog entry for E327 pending detailed additive review.
+e328,Antioxidant and acidity regulator E328,Review Needed,Seed catalog entry for E328 pending detailed additive review.
+e329,Antioxidant and acidity regulator E329,Review Needed,Seed catalog entry for E329 pending detailed additive review.
+e330,Citric acid,Low,Acidity regulator widely found in fruit based products.
+e331,Antioxidant and acidity regulator E331,Review Needed,Seed catalog entry for E331 pending detailed additive review.
+e332,Antioxidant and acidity regulator E332,Review Needed,Seed catalog entry for E332 pending detailed additive review.
+e333,Antioxidant and acidity regulator E333,Review Needed,Seed catalog entry for E333 pending detailed additive review.
+e334,Antioxidant and acidity regulator E334,Review Needed,Seed catalog entry for E334 pending detailed additive review.
+e335,Antioxidant and acidity regulator E335,Review Needed,Seed catalog entry for E335 pending detailed additive review.
+e336,Antioxidant and acidity regulator E336,Review Needed,Seed catalog entry for E336 pending detailed additive review.
+e337,Antioxidant and acidity regulator E337,Review Needed,Seed catalog entry for E337 pending detailed additive review.
+e338,Antioxidant and acidity regulator E338,Review Needed,Seed catalog entry for E338 pending detailed additive review.
+e339,Antioxidant and acidity regulator E339,Review Needed,Seed catalog entry for E339 pending detailed additive review.
+e340,Antioxidant and acidity regulator E340,Review Needed,Seed catalog entry for E340 pending detailed additive review.
+e341,Antioxidant and acidity regulator E341,Review Needed,Seed catalog entry for E341 pending detailed additive review.
+e342,Antioxidant and acidity regulator E342,Review Needed,Seed catalog entry for E342 pending detailed additive review.
+e343,Antioxidant and acidity regulator E343,Review Needed,Seed catalog entry for E343 pending detailed additive review.
+e344,Antioxidant and acidity regulator E344,Review Needed,Seed catalog entry for E344 pending detailed additive review.
+e345,Antioxidant and acidity regulator E345,Review Needed,Seed catalog entry for E345 pending detailed additive review.
+e346,Antioxidant and acidity regulator E346,Review Needed,Seed catalog entry for E346 pending detailed additive review.
+e347,Antioxidant and acidity regulator E347,Review Needed,Seed catalog entry for E347 pending detailed additive review.
+e348,Antioxidant and acidity regulator E348,Review Needed,Seed catalog entry for E348 pending detailed additive review.
+e349,Antioxidant and acidity regulator E349,Review Needed,Seed catalog entry for E349 pending detailed additive review.
+e350,Antioxidant and acidity regulator E350,Review Needed,Seed catalog entry for E350 pending detailed additive review.
+e351,Antioxidant and acidity regulator E351,Review Needed,Seed catalog entry for E351 pending detailed additive review.
+e352,Antioxidant and acidity regulator E352,Review Needed,Seed catalog entry for E352 pending detailed additive review.
+e353,Antioxidant and acidity regulator E353,Review Needed,Seed catalog entry for E353 pending detailed additive review.
+e354,Antioxidant and acidity regulator E354,Review Needed,Seed catalog entry for E354 pending detailed additive review.
+e355,Antioxidant and acidity regulator E355,Review Needed,Seed catalog entry for E355 pending detailed additive review.
+e356,Antioxidant and acidity regulator E356,Review Needed,Seed catalog entry for E356 pending detailed additive review.
+e357,Antioxidant and acidity regulator E357,Review Needed,Seed catalog entry for E357 pending detailed additive review.
+e358,Antioxidant and acidity regulator E358,Review Needed,Seed catalog entry for E358 pending detailed additive review.
+e359,Antioxidant and acidity regulator E359,Review Needed,Seed catalog entry for E359 pending detailed additive review.
+e360,Antioxidant and acidity regulator E360,Review Needed,Seed catalog entry for E360 pending detailed additive review.
+e361,Antioxidant and acidity regulator E361,Review Needed,Seed catalog entry for E361 pending detailed additive review.
+e362,Antioxidant and acidity regulator E362,Review Needed,Seed catalog entry for E362 pending detailed additive review.
+e363,Antioxidant and acidity regulator E363,Review Needed,Seed catalog entry for E363 pending detailed additive review.
+e364,Antioxidant and acidity regulator E364,Review Needed,Seed catalog entry for E364 pending detailed additive review.
+e365,Antioxidant and acidity regulator E365,Review Needed,Seed catalog entry for E365 pending detailed additive review.
+e366,Antioxidant and acidity regulator E366,Review Needed,Seed catalog entry for E366 pending detailed additive review.
+e367,Antioxidant and acidity regulator E367,Review Needed,Seed catalog entry for E367 pending detailed additive review.
+e368,Antioxidant and acidity regulator E368,Review Needed,Seed catalog entry for E368 pending detailed additive review.
+e369,Antioxidant and acidity regulator E369,Review Needed,Seed catalog entry for E369 pending detailed additive review.
+e370,Antioxidant and acidity regulator E370,Review Needed,Seed catalog entry for E370 pending detailed additive review.
+e371,Antioxidant and acidity regulator E371,Review Needed,Seed catalog entry for E371 pending detailed additive review.
+e372,Antioxidant and acidity regulator E372,Review Needed,Seed catalog entry for E372 pending detailed additive review.
+e373,Antioxidant and acidity regulator E373,Review Needed,Seed catalog entry for E373 pending detailed additive review.
+e374,Antioxidant and acidity regulator E374,Review Needed,Seed catalog entry for E374 pending detailed additive review.
+e375,Antioxidant and acidity regulator E375,Review Needed,Seed catalog entry for E375 pending detailed additive review.
+e376,Antioxidant and acidity regulator E376,Review Needed,Seed catalog entry for E376 pending detailed additive review.
+e377,Antioxidant and acidity regulator E377,Review Needed,Seed catalog entry for E377 pending detailed additive review.
+e378,Antioxidant and acidity regulator E378,Review Needed,Seed catalog entry for E378 pending detailed additive review.
+e379,Antioxidant and acidity regulator E379,Review Needed,Seed catalog entry for E379 pending detailed additive review.
+e380,Antioxidant and acidity regulator E380,Review Needed,Seed catalog entry for E380 pending detailed additive review.
+e381,Antioxidant and acidity regulator E381,Review Needed,Seed catalog entry for E381 pending detailed additive review.
+e382,Antioxidant and acidity regulator E382,Review Needed,Seed catalog entry for E382 pending detailed additive review.
+e383,Antioxidant and acidity regulator E383,Review Needed,Seed catalog entry for E383 pending detailed additive review.
+e384,Antioxidant and acidity regulator E384,Review Needed,Seed catalog entry for E384 pending detailed additive review.
+e385,Antioxidant and acidity regulator E385,Review Needed,Seed catalog entry for E385 pending detailed additive review.
+e386,Antioxidant and acidity regulator E386,Review Needed,Seed catalog entry for E386 pending detailed additive review.
+e387,Antioxidant and acidity regulator E387,Review Needed,Seed catalog entry for E387 pending detailed additive review.
+e388,Antioxidant and acidity regulator E388,Review Needed,Seed catalog entry for E388 pending detailed additive review.
+e389,Antioxidant and acidity regulator E389,Review Needed,Seed catalog entry for E389 pending detailed additive review.
+e390,Antioxidant and acidity regulator E390,Review Needed,Seed catalog entry for E390 pending detailed additive review.
+e391,Antioxidant and acidity regulator E391,Review Needed,Seed catalog entry for E391 pending detailed additive review.
+e392,Antioxidant and acidity regulator E392,Review Needed,Seed catalog entry for E392 pending detailed additive review.
+e393,Antioxidant and acidity regulator E393,Review Needed,Seed catalog entry for E393 pending detailed additive review.
+e394,Antioxidant and acidity regulator E394,Review Needed,Seed catalog entry for E394 pending detailed additive review.
+e395,Antioxidant and acidity regulator E395,Review Needed,Seed catalog entry for E395 pending detailed additive review.
+e396,Antioxidant and acidity regulator E396,Review Needed,Seed catalog entry for E396 pending detailed additive review.
+e397,Antioxidant and acidity regulator E397,Review Needed,Seed catalog entry for E397 pending detailed additive review.
+e398,Antioxidant and acidity regulator E398,Review Needed,Seed catalog entry for E398 pending detailed additive review.
+e399,Antioxidant and acidity regulator E399,Review Needed,Seed catalog entry for E399 pending detailed additive review.
+e400,Texture enhancer E400,Review Needed,Seed catalog entry for E400 pending detailed additive review.
+e401,Texture enhancer E401,Review Needed,Seed catalog entry for E401 pending detailed additive review.
+e402,Texture enhancer E402,Review Needed,Seed catalog entry for E402 pending detailed additive review.
+e403,Texture enhancer E403,Review Needed,Seed catalog entry for E403 pending detailed additive review.
+e404,Texture enhancer E404,Review Needed,Seed catalog entry for E404 pending detailed additive review.
+e405,Texture enhancer E405,Review Needed,Seed catalog entry for E405 pending detailed additive review.
+e406,Texture enhancer E406,Review Needed,Seed catalog entry for E406 pending detailed additive review.
+e407,Carrageenan,Moderate,Seaweed based thickener often discussed in clean label reviews.
+e408,Texture enhancer E408,Review Needed,Seed catalog entry for E408 pending detailed additive review.
+e409,Texture enhancer E409,Review Needed,Seed catalog entry for E409 pending detailed additive review.
+e410,Texture enhancer E410,Review Needed,Seed catalog entry for E410 pending detailed additive review.
+e411,Texture enhancer E411,Review Needed,Seed catalog entry for E411 pending detailed additive review.
+e412,Texture enhancer E412,Review Needed,Seed catalog entry for E412 pending detailed additive review.
+e413,Texture enhancer E413,Review Needed,Seed catalog entry for E413 pending detailed additive review.
+e414,Texture enhancer E414,Review Needed,Seed catalog entry for E414 pending detailed additive review.
+e415,Xanthan gum,Low,Fermentation derived thickener used for texture stability.
+e416,Texture enhancer E416,Review Needed,Seed catalog entry for E416 pending detailed additive review.
+e417,Texture enhancer E417,Review Needed,Seed catalog entry for E417 pending detailed additive review.
+e418,Texture enhancer E418,Review Needed,Seed catalog entry for E418 pending detailed additive review.
+e419,Texture enhancer E419,Review Needed,Seed catalog entry for E419 pending detailed additive review.
+e420,Texture enhancer E420,Review Needed,Seed catalog entry for E420 pending detailed additive review.
+e421,Texture enhancer E421,Review Needed,Seed catalog entry for E421 pending detailed additive review.
+e422,Texture enhancer E422,Review Needed,Seed catalog entry for E422 pending detailed additive review.
+e423,Texture enhancer E423,Review Needed,Seed catalog entry for E423 pending detailed additive review.
+e424,Texture enhancer E424,Review Needed,Seed catalog entry for E424 pending detailed additive review.
+e425,Texture enhancer E425,Review Needed,Seed catalog entry for E425 pending detailed additive review.
+e426,Texture enhancer E426,Review Needed,Seed catalog entry for E426 pending detailed additive review.
+e427,Texture enhancer E427,Review Needed,Seed catalog entry for E427 pending detailed additive review.
+e428,Texture enhancer E428,Review Needed,Seed catalog entry for E428 pending detailed additive review.
+e429,Texture enhancer E429,Review Needed,Seed catalog entry for E429 pending detailed additive review.
+e430,Texture enhancer E430,Review Needed,Seed catalog entry for E430 pending detailed additive review.
+e431,Texture enhancer E431,Review Needed,Seed catalog entry for E431 pending detailed additive review.
+e432,Texture enhancer E432,Review Needed,Seed catalog entry for E432 pending detailed additive review.
+e433,Texture enhancer E433,Review Needed,Seed catalog entry for E433 pending detailed additive review.
+e434,Texture enhancer E434,Review Needed,Seed catalog entry for E434 pending detailed additive review.
+e435,Texture enhancer E435,Review Needed,Seed catalog entry for E435 pending detailed additive review.
+e436,Texture enhancer E436,Review Needed,Seed catalog entry for E436 pending detailed additive review.
+e437,Texture enhancer E437,Review Needed,Seed catalog entry for E437 pending detailed additive review.
+e438,Texture enhancer E438,Review Needed,Seed catalog entry for E438 pending detailed additive review.
+e439,Texture enhancer E439,Review Needed,Seed catalog entry for E439 pending detailed additive review.
+e440,Texture enhancer E440,Review Needed,Seed catalog entry for E440 pending detailed additive review.
+e441,Texture enhancer E441,Review Needed,Seed catalog entry for E441 pending detailed additive review.
+e442,Texture enhancer E442,Review Needed,Seed catalog entry for E442 pending detailed additive review.
+e443,Texture enhancer E443,Review Needed,Seed catalog entry for E443 pending detailed additive review.
+e444,Texture enhancer E444,Review Needed,Seed catalog entry for E444 pending detailed additive review.
+e445,Texture enhancer E445,Review Needed,Seed catalog entry for E445 pending detailed additive review.
+e446,Texture enhancer E446,Review Needed,Seed catalog entry for E446 pending detailed additive review.
+e447,Texture enhancer E447,Review Needed,Seed catalog entry for E447 pending detailed additive review.
+e448,Texture enhancer E448,Review Needed,Seed catalog entry for E448 pending detailed additive review.
+e449,Texture enhancer E449,Review Needed,Seed catalog entry for E449 pending detailed additive review.
+e450,Texture enhancer E450,Review Needed,Seed catalog entry for E450 pending detailed additive review.
+e451,Texture enhancer E451,Review Needed,Seed catalog entry for E451 pending detailed additive review.
+e452,Texture enhancer E452,Review Needed,Seed catalog entry for E452 pending detailed additive review.
+e453,Texture enhancer E453,Review Needed,Seed catalog entry for E453 pending detailed additive review.
+e454,Texture enhancer E454,Review Needed,Seed catalog entry for E454 pending detailed additive review.
+e455,Texture enhancer E455,Review Needed,Seed catalog entry for E455 pending detailed additive review.
+e456,Texture enhancer E456,Review Needed,Seed catalog entry for E456 pending detailed additive review.
+e457,Texture enhancer E457,Review Needed,Seed catalog entry for E457 pending detailed additive review.
+e458,Texture enhancer E458,Review Needed,Seed catalog entry for E458 pending detailed additive review.
+e459,Texture enhancer E459,Review Needed,Seed catalog entry for E459 pending detailed additive review.
+e460,Texture enhancer E460,Review Needed,Seed catalog entry for E460 pending detailed additive review.
+e461,Texture enhancer E461,Review Needed,Seed catalog entry for E461 pending detailed additive review.
+e462,Texture enhancer E462,Review Needed,Seed catalog entry for E462 pending detailed additive review.
+e463,Texture enhancer E463,Review Needed,Seed catalog entry for E463 pending detailed additive review.
+e464,Texture enhancer E464,Review Needed,Seed catalog entry for E464 pending detailed additive review.
+e465,Texture enhancer E465,Review Needed,Seed catalog entry for E465 pending detailed additive review.
+e466,Texture enhancer E466,Review Needed,Seed catalog entry for E466 pending detailed additive review.
+e467,Texture enhancer E467,Review Needed,Seed catalog entry for E467 pending detailed additive review.
+e468,Texture enhancer E468,Review Needed,Seed catalog entry for E468 pending detailed additive review.
+e469,Texture enhancer E469,Review Needed,Seed catalog entry for E469 pending detailed additive review.
+e470,Texture enhancer E470,Review Needed,Seed catalog entry for E470 pending detailed additive review.
+e471,Mono and diglycerides of fatty acids,Moderate,Emulsifier that improves texture and shelf life.
+e472,Texture enhancer E472,Review Needed,Seed catalog entry for E472 pending detailed additive review.
+e473,Texture enhancer E473,Review Needed,Seed catalog entry for E473 pending detailed additive review.
+e474,Texture enhancer E474,Review Needed,Seed catalog entry for E474 pending detailed additive review.
+e475,Texture enhancer E475,Review Needed,Seed catalog entry for E475 pending detailed additive review.
+e476,Texture enhancer E476,Review Needed,Seed catalog entry for E476 pending detailed additive review.
+e477,Texture enhancer E477,Review Needed,Seed catalog entry for E477 pending detailed additive review.
+e478,Texture enhancer E478,Review Needed,Seed catalog entry for E478 pending detailed additive review.
+e479,Texture enhancer E479,Review Needed,Seed catalog entry for E479 pending detailed additive review.
+e480,Texture enhancer E480,Review Needed,Seed catalog entry for E480 pending detailed additive review.
+e481,Texture enhancer E481,Review Needed,Seed catalog entry for E481 pending detailed additive review.
+e482,Texture enhancer E482,Review Needed,Seed catalog entry for E482 pending detailed additive review.
+e483,Texture enhancer E483,Review Needed,Seed catalog entry for E483 pending detailed additive review.
+e484,Texture enhancer E484,Review Needed,Seed catalog entry for E484 pending detailed additive review.
+e485,Texture enhancer E485,Review Needed,Seed catalog entry for E485 pending detailed additive review.
+e486,Texture enhancer E486,Review Needed,Seed catalog entry for E486 pending detailed additive review.
+e487,Texture enhancer E487,Review Needed,Seed catalog entry for E487 pending detailed additive review.
+e488,Texture enhancer E488,Review Needed,Seed catalog entry for E488 pending detailed additive review.
+e489,Texture enhancer E489,Review Needed,Seed catalog entry for E489 pending detailed additive review.
+e490,Texture enhancer E490,Review Needed,Seed catalog entry for E490 pending detailed additive review.
+e491,Texture enhancer E491,Review Needed,Seed catalog entry for E491 pending detailed additive review.
+e492,Texture enhancer E492,Review Needed,Seed catalog entry for E492 pending detailed additive review.
+e493,Texture enhancer E493,Review Needed,Seed catalog entry for E493 pending detailed additive review.
+e494,Texture enhancer E494,Review Needed,Seed catalog entry for E494 pending detailed additive review.
+e495,Texture enhancer E495,Review Needed,Seed catalog entry for E495 pending detailed additive review.
+e496,Texture enhancer E496,Review Needed,Seed catalog entry for E496 pending detailed additive review.
+e497,Texture enhancer E497,Review Needed,Seed catalog entry for E497 pending detailed additive review.
+e498,Texture enhancer E498,Review Needed,Seed catalog entry for E498 pending detailed additive review.
+e499,Texture enhancer E499,Review Needed,Seed catalog entry for E499 pending detailed additive review.
+e500,Sodium carbonates,Low,Raising agent used in baking powders and snacks.
+e501,Acidity regulator and anti caking agent E501,Review Needed,Seed catalog entry for E501 pending detailed additive review.
+e502,Acidity regulator and anti caking agent E502,Review Needed,Seed catalog entry for E502 pending detailed additive review.
+e503,Acidity regulator and anti caking agent E503,Review Needed,Seed catalog entry for E503 pending detailed additive review.
+e504,Acidity regulator and anti caking agent E504,Review Needed,Seed catalog entry for E504 pending detailed additive review.
+e505,Acidity regulator and anti caking agent E505,Review Needed,Seed catalog entry for E505 pending detailed additive review.
+e506,Acidity regulator and anti caking agent E506,Review Needed,Seed catalog entry for E506 pending detailed additive review.
+e507,Acidity regulator and anti caking agent E507,Review Needed,Seed catalog entry for E507 pending detailed additive review.
+e508,Acidity regulator and anti caking agent E508,Review Needed,Seed catalog entry for E508 pending detailed additive review.
+e509,Acidity regulator and anti caking agent E509,Review Needed,Seed catalog entry for E509 pending detailed additive review.
+e510,Acidity regulator and anti caking agent E510,Review Needed,Seed catalog entry for E510 pending detailed additive review.
+e511,Acidity regulator and anti caking agent E511,Review Needed,Seed catalog entry for E511 pending detailed additive review.
+e512,Acidity regulator and anti caking agent E512,Review Needed,Seed catalog entry for E512 pending detailed additive review.
+e513,Acidity regulator and anti caking agent E513,Review Needed,Seed catalog entry for E513 pending detailed additive review.
+e514,Acidity regulator and anti caking agent E514,Review Needed,Seed catalog entry for E514 pending detailed additive review.
+e515,Acidity regulator and anti caking agent E515,Review Needed,Seed catalog entry for E515 pending detailed additive review.
+e516,Acidity regulator and anti caking agent E516,Review Needed,Seed catalog entry for E516 pending detailed additive review.
+e517,Acidity regulator and anti caking agent E517,Review Needed,Seed catalog entry for E517 pending detailed additive review.
+e518,Acidity regulator and anti caking agent E518,Review Needed,Seed catalog entry for E518 pending detailed additive review.
+e519,Acidity regulator and anti caking agent E519,Review Needed,Seed catalog entry for E519 pending detailed additive review.
+e520,Acidity regulator and anti caking agent E520,Review Needed,Seed catalog entry for E520 pending detailed additive review.
+e521,Acidity regulator and anti caking agent E521,Review Needed,Seed catalog entry for E521 pending detailed additive review.
+e522,Acidity regulator and anti caking agent E522,Review Needed,Seed catalog entry for E522 pending detailed additive review.
+e523,Acidity regulator and anti caking agent E523,Review Needed,Seed catalog entry for E523 pending detailed additive review.
+e524,Acidity regulator and anti caking agent E524,Review Needed,Seed catalog entry for E524 pending detailed additive review.
+e525,Acidity regulator and anti caking agent E525,Review Needed,Seed catalog entry for E525 pending detailed additive review.
+e526,Acidity regulator and anti caking agent E526,Review Needed,Seed catalog entry for E526 pending detailed additive review.
+e527,Acidity regulator and anti caking agent E527,Review Needed,Seed catalog entry for E527 pending detailed additive review.
+e528,Acidity regulator and anti caking agent E528,Review Needed,Seed catalog entry for E528 pending detailed additive review.
+e529,Acidity regulator and anti caking agent E529,Review Needed,Seed catalog entry for E529 pending detailed additive review.
+e530,Acidity regulator and anti caking agent E530,Review Needed,Seed catalog entry for E530 pending detailed additive review.
+e531,Acidity regulator and anti caking agent E531,Review Needed,Seed catalog entry for E531 pending detailed additive review.
+e532,Acidity regulator and anti caking agent E532,Review Needed,Seed catalog entry for E532 pending detailed additive review.
+e533,Acidity regulator and anti caking agent E533,Review Needed,Seed catalog entry for E533 pending detailed additive review.
+e534,Acidity regulator and anti caking agent E534,Review Needed,Seed catalog entry for E534 pending detailed additive review.
+e535,Acidity regulator and anti caking agent E535,Review Needed,Seed catalog entry for E535 pending detailed additive review.
+e536,Acidity regulator and anti caking agent E536,Review Needed,Seed catalog entry for E536 pending detailed additive review.
+e537,Acidity regulator and anti caking agent E537,Review Needed,Seed catalog entry for E537 pending detailed additive review.
+e538,Acidity regulator and anti caking agent E538,Review Needed,Seed catalog entry for E538 pending detailed additive review.
+e539,Acidity regulator and anti caking agent E539,Review Needed,Seed catalog entry for E539 pending detailed additive review.
+e540,Acidity regulator and anti caking agent E540,Review Needed,Seed catalog entry for E540 pending detailed additive review.
+e541,Acidity regulator and anti caking agent E541,Review Needed,Seed catalog entry for E541 pending detailed additive review.
+e542,Acidity regulator and anti caking agent E542,Review Needed,Seed catalog entry for E542 pending detailed additive review.
+e543,Acidity regulator and anti caking agent E543,Review Needed,Seed catalog entry for E543 pending detailed additive review.
+e544,Acidity regulator and anti caking agent E544,Review Needed,Seed catalog entry for E544 pending detailed additive review.
+e545,Acidity regulator and anti caking agent E545,Review Needed,Seed catalog entry for E545 pending detailed additive review.
+e546,Acidity regulator and anti caking agent E546,Review Needed,Seed catalog entry for E546 pending detailed additive review.
+e547,Acidity regulator and anti caking agent E547,Review Needed,Seed catalog entry for E547 pending detailed additive review.
+e548,Acidity regulator and anti caking agent E548,Review Needed,Seed catalog entry for E548 pending detailed additive review.
+e549,Acidity regulator and anti caking agent E549,Review Needed,Seed catalog entry for E549 pending detailed additive review.
+e550,Acidity regulator and anti caking agent E550,Review Needed,Seed catalog entry for E550 pending detailed additive review.
+e551,Acidity regulator and anti caking agent E551,Review Needed,Seed catalog entry for E551 pending detailed additive review.
+e552,Acidity regulator and anti caking agent E552,Review Needed,Seed catalog entry for E552 pending detailed additive review.
+e553,Acidity regulator and anti caking agent E553,Review Needed,Seed catalog entry for E553 pending detailed additive review.
+e554,Acidity regulator and anti caking agent E554,Review Needed,Seed catalog entry for E554 pending detailed additive review.
+e555,Acidity regulator and anti caking agent E555,Review Needed,Seed catalog entry for E555 pending detailed additive review.
+e556,Acidity regulator and anti caking agent E556,Review Needed,Seed catalog entry for E556 pending detailed additive review.
+e557,Acidity regulator and anti caking agent E557,Review Needed,Seed catalog entry for E557 pending detailed additive review.
+e558,Acidity regulator and anti caking agent E558,Review Needed,Seed catalog entry for E558 pending detailed additive review.
+e559,Acidity regulator and anti caking agent E559,Review Needed,Seed catalog entry for E559 pending detailed additive review.
+e560,Acidity regulator and anti caking agent E560,Review Needed,Seed catalog entry for E560 pending detailed additive review.
+e561,Acidity regulator and anti caking agent E561,Review Needed,Seed catalog entry for E561 pending detailed additive review.
+e562,Acidity regulator and anti caking agent E562,Review Needed,Seed catalog entry for E562 pending detailed additive review.
+e563,Acidity regulator and anti caking agent E563,Review Needed,Seed catalog entry for E563 pending detailed additive review.
+e564,Acidity regulator and anti caking agent E564,Review Needed,Seed catalog entry for E564 pending detailed additive review.
+e565,Acidity regulator and anti caking agent E565,Review Needed,Seed catalog entry for E565 pending detailed additive review.
+e566,Acidity regulator and anti caking agent E566,Review Needed,Seed catalog entry for E566 pending detailed additive review.
+e567,Acidity regulator and anti caking agent E567,Review Needed,Seed catalog entry for E567 pending detailed additive review.
+e568,Acidity regulator and anti caking agent E568,Review Needed,Seed catalog entry for E568 pending detailed additive review.
+e569,Acidity regulator and anti caking agent E569,Review Needed,Seed catalog entry for E569 pending detailed additive review.
+e570,Acidity regulator and anti caking agent E570,Review Needed,Seed catalog entry for E570 pending detailed additive review.
+e571,Acidity regulator and anti caking agent E571,Review Needed,Seed catalog entry for E571 pending detailed additive review.
+e572,Acidity regulator and anti caking agent E572,Review Needed,Seed catalog entry for E572 pending detailed additive review.
+e573,Acidity regulator and anti caking agent E573,Review Needed,Seed catalog entry for E573 pending detailed additive review.
+e574,Acidity regulator and anti caking agent E574,Review Needed,Seed catalog entry for E574 pending detailed additive review.
+e575,Acidity regulator and anti caking agent E575,Review Needed,Seed catalog entry for E575 pending detailed additive review.
+e576,Acidity regulator and anti caking agent E576,Review Needed,Seed catalog entry for E576 pending detailed additive review.
+e577,Acidity regulator and anti caking agent E577,Review Needed,Seed catalog entry for E577 pending detailed additive review.
+e578,Acidity regulator and anti caking agent E578,Review Needed,Seed catalog entry for E578 pending detailed additive review.
+e579,Acidity regulator and anti caking agent E579,Review Needed,Seed catalog entry for E579 pending detailed additive review.
+e580,Acidity regulator and anti caking agent E580,Review Needed,Seed catalog entry for E580 pending detailed additive review.
+e581,Acidity regulator and anti caking agent E581,Review Needed,Seed catalog entry for E581 pending detailed additive review.
+e582,Acidity regulator and anti caking agent E582,Review Needed,Seed catalog entry for E582 pending detailed additive review.
+e583,Acidity regulator and anti caking agent E583,Review Needed,Seed catalog entry for E583 pending detailed additive review.
+e584,Acidity regulator and anti caking agent E584,Review Needed,Seed catalog entry for E584 pending detailed additive review.
+e585,Acidity regulator and anti caking agent E585,Review Needed,Seed catalog entry for E585 pending detailed additive review.
+e586,Acidity regulator and anti caking agent E586,Review Needed,Seed catalog entry for E586 pending detailed additive review.
+e587,Acidity regulator and anti caking agent E587,Review Needed,Seed catalog entry for E587 pending detailed additive review.
+e588,Acidity regulator and anti caking agent E588,Review Needed,Seed catalog entry for E588 pending detailed additive review.
+e589,Acidity regulator and anti caking agent E589,Review Needed,Seed catalog entry for E589 pending detailed additive review.
+e590,Acidity regulator and anti caking agent E590,Review Needed,Seed catalog entry for E590 pending detailed additive review.
+e591,Acidity regulator and anti caking agent E591,Review Needed,Seed catalog entry for E591 pending detailed additive review.
+e592,Acidity regulator and anti caking agent E592,Review Needed,Seed catalog entry for E592 pending detailed additive review.
+e593,Acidity regulator and anti caking agent E593,Review Needed,Seed catalog entry for E593 pending detailed additive review.
+e594,Acidity regulator and anti caking agent E594,Review Needed,Seed catalog entry for E594 pending detailed additive review.
+e595,Acidity regulator and anti caking agent E595,Review Needed,Seed catalog entry for E595 pending detailed additive review.
+e596,Acidity regulator and anti caking agent E596,Review Needed,Seed catalog entry for E596 pending detailed additive review.
+e597,Acidity regulator and anti caking agent E597,Review Needed,Seed catalog entry for E597 pending detailed additive review.
+e598,Acidity regulator and anti caking agent E598,Review Needed,Seed catalog entry for E598 pending detailed additive review.
+e599,Acidity regulator and anti caking agent E599,Review Needed,Seed catalog entry for E599 pending detailed additive review.
+e600,Flavor enhancer E600,Review Needed,Seed catalog entry for E600 pending detailed additive review.
+e601,Flavor enhancer E601,Review Needed,Seed catalog entry for E601 pending detailed additive review.
+e602,Flavor enhancer E602,Review Needed,Seed catalog entry for E602 pending detailed additive review.
+e603,Flavor enhancer E603,Review Needed,Seed catalog entry for E603 pending detailed additive review.
+e604,Flavor enhancer E604,Review Needed,Seed catalog entry for E604 pending detailed additive review.
+e605,Flavor enhancer E605,Review Needed,Seed catalog entry for E605 pending detailed additive review.
+e606,Flavor enhancer E606,Review Needed,Seed catalog entry for E606 pending detailed additive review.
+e607,Flavor enhancer E607,Review Needed,Seed catalog entry for E607 pending detailed additive review.
+e608,Flavor enhancer E608,Review Needed,Seed catalog entry for E608 pending detailed additive review.
+e609,Flavor enhancer E609,Review Needed,Seed catalog entry for E609 pending detailed additive review.
+e610,Flavor enhancer E610,Review Needed,Seed catalog entry for E610 pending detailed additive review.
+e611,Flavor enhancer E611,Review Needed,Seed catalog entry for E611 pending detailed additive review.
+e612,Flavor enhancer E612,Review Needed,Seed catalog entry for E612 pending detailed additive review.
+e613,Flavor enhancer E613,Review Needed,Seed catalog entry for E613 pending detailed additive review.
+e614,Flavor enhancer E614,Review Needed,Seed catalog entry for E614 pending detailed additive review.
+e615,Flavor enhancer E615,Review Needed,Seed catalog entry for E615 pending detailed additive review.
+e616,Flavor enhancer E616,Review Needed,Seed catalog entry for E616 pending detailed additive review.
+e617,Flavor enhancer E617,Review Needed,Seed catalog entry for E617 pending detailed additive review.
+e618,Flavor enhancer E618,Review Needed,Seed catalog entry for E618 pending detailed additive review.
+e619,Flavor enhancer E619,Review Needed,Seed catalog entry for E619 pending detailed additive review.
+e620,Flavor enhancer E620,Review Needed,Seed catalog entry for E620 pending detailed additive review.
+e621,Monosodium glutamate,High,Flavor enhancer strongly associated with ultra processed foods.
+e622,Flavor enhancer E622,Review Needed,Seed catalog entry for E622 pending detailed additive review.
+e623,Flavor enhancer E623,Review Needed,Seed catalog entry for E623 pending detailed additive review.
+e624,Flavor enhancer E624,Review Needed,Seed catalog entry for E624 pending detailed additive review.
+e625,Flavor enhancer E625,Review Needed,Seed catalog entry for E625 pending detailed additive review.
+e626,Flavor enhancer E626,Review Needed,Seed catalog entry for E626 pending detailed additive review.
+e627,Flavor enhancer E627,Review Needed,Seed catalog entry for E627 pending detailed additive review.
+e628,Flavor enhancer E628,Review Needed,Seed catalog entry for E628 pending detailed additive review.
+e629,Flavor enhancer E629,Review Needed,Seed catalog entry for E629 pending detailed additive review.
+e630,Flavor enhancer E630,Review Needed,Seed catalog entry for E630 pending detailed additive review.
+e631,Flavor enhancer E631,Review Needed,Seed catalog entry for E631 pending detailed additive review.
+e632,Flavor enhancer E632,Review Needed,Seed catalog entry for E632 pending detailed additive review.
+e633,Flavor enhancer E633,Review Needed,Seed catalog entry for E633 pending detailed additive review.
+e634,Flavor enhancer E634,Review Needed,Seed catalog entry for E634 pending detailed additive review.
+e635,Flavor enhancer E635,Review Needed,Seed catalog entry for E635 pending detailed additive review.
+e636,Flavor enhancer E636,Review Needed,Seed catalog entry for E636 pending detailed additive review.
+e637,Flavor enhancer E637,Review Needed,Seed catalog entry for E637 pending detailed additive review.
+e638,Flavor enhancer E638,Review Needed,Seed catalog entry for E638 pending detailed additive review.
+e639,Flavor enhancer E639,Review Needed,Seed catalog entry for E639 pending detailed additive review.
+e640,Flavor enhancer E640,Review Needed,Seed catalog entry for E640 pending detailed additive review.
+e641,Flavor enhancer E641,Review Needed,Seed catalog entry for E641 pending detailed additive review.
+e642,Flavor enhancer E642,Review Needed,Seed catalog entry for E642 pending detailed additive review.
+e643,Flavor enhancer E643,Review Needed,Seed catalog entry for E643 pending detailed additive review.
+e644,Flavor enhancer E644,Review Needed,Seed catalog entry for E644 pending detailed additive review.
+e645,Flavor enhancer E645,Review Needed,Seed catalog entry for E645 pending detailed additive review.
+e646,Flavor enhancer E646,Review Needed,Seed catalog entry for E646 pending detailed additive review.
+e647,Flavor enhancer E647,Review Needed,Seed catalog entry for E647 pending detailed additive review.
+e648,Flavor enhancer E648,Review Needed,Seed catalog entry for E648 pending detailed additive review.
+e649,Flavor enhancer E649,Review Needed,Seed catalog entry for E649 pending detailed additive review.
+e650,Flavor enhancer E650,Review Needed,Seed catalog entry for E650 pending detailed additive review.
+e651,Flavor enhancer E651,Review Needed,Seed catalog entry for E651 pending detailed additive review.
+e652,Flavor enhancer E652,Review Needed,Seed catalog entry for E652 pending detailed additive review.
+e653,Flavor enhancer E653,Review Needed,Seed catalog entry for E653 pending detailed additive review.
+e654,Flavor enhancer E654,Review Needed,Seed catalog entry for E654 pending detailed additive review.
+e655,Flavor enhancer E655,Review Needed,Seed catalog entry for E655 pending detailed additive review.
+e656,Flavor enhancer E656,Review Needed,Seed catalog entry for E656 pending detailed additive review.
+e657,Flavor enhancer E657,Review Needed,Seed catalog entry for E657 pending detailed additive review.
+e658,Flavor enhancer E658,Review Needed,Seed catalog entry for E658 pending detailed additive review.
+e659,Flavor enhancer E659,Review Needed,Seed catalog entry for E659 pending detailed additive review.
+e660,Flavor enhancer E660,Review Needed,Seed catalog entry for E660 pending detailed additive review.
+e661,Flavor enhancer E661,Review Needed,Seed catalog entry for E661 pending detailed additive review.
+e662,Flavor enhancer E662,Review Needed,Seed catalog entry for E662 pending detailed additive review.
+e663,Flavor enhancer E663,Review Needed,Seed catalog entry for E663 pending detailed additive review.
+e664,Flavor enhancer E664,Review Needed,Seed catalog entry for E664 pending detailed additive review.
+e665,Flavor enhancer E665,Review Needed,Seed catalog entry for E665 pending detailed additive review.
+e666,Flavor enhancer E666,Review Needed,Seed catalog entry for E666 pending detailed additive review.
+e667,Flavor enhancer E667,Review Needed,Seed catalog entry for E667 pending detailed additive review.
+e668,Flavor enhancer E668,Review Needed,Seed catalog entry for E668 pending detailed additive review.
+e669,Flavor enhancer E669,Review Needed,Seed catalog entry for E669 pending detailed additive review.
+e670,Flavor enhancer E670,Review Needed,Seed catalog entry for E670 pending detailed additive review.
+e671,Flavor enhancer E671,Review Needed,Seed catalog entry for E671 pending detailed additive review.
+e672,Flavor enhancer E672,Review Needed,Seed catalog entry for E672 pending detailed additive review.
+e673,Flavor enhancer E673,Review Needed,Seed catalog entry for E673 pending detailed additive review.
+e674,Flavor enhancer E674,Review Needed,Seed catalog entry for E674 pending detailed additive review.
+e675,Flavor enhancer E675,Review Needed,Seed catalog entry for E675 pending detailed additive review.
+e676,Flavor enhancer E676,Review Needed,Seed catalog entry for E676 pending detailed additive review.
+e677,Flavor enhancer E677,Review Needed,Seed catalog entry for E677 pending detailed additive review.
+e678,Flavor enhancer E678,Review Needed,Seed catalog entry for E678 pending detailed additive review.
+e679,Flavor enhancer E679,Review Needed,Seed catalog entry for E679 pending detailed additive review.
+e680,Flavor enhancer E680,Review Needed,Seed catalog entry for E680 pending detailed additive review.
+e681,Flavor enhancer E681,Review Needed,Seed catalog entry for E681 pending detailed additive review.
+e682,Flavor enhancer E682,Review Needed,Seed catalog entry for E682 pending detailed additive review.
+e683,Flavor enhancer E683,Review Needed,Seed catalog entry for E683 pending detailed additive review.
+e684,Flavor enhancer E684,Review Needed,Seed catalog entry for E684 pending detailed additive review.
+e685,Flavor enhancer E685,Review Needed,Seed catalog entry for E685 pending detailed additive review.
+e686,Flavor enhancer E686,Review Needed,Seed catalog entry for E686 pending detailed additive review.
+e687,Flavor enhancer E687,Review Needed,Seed catalog entry for E687 pending detailed additive review.
+e688,Flavor enhancer E688,Review Needed,Seed catalog entry for E688 pending detailed additive review.
+e689,Flavor enhancer E689,Review Needed,Seed catalog entry for E689 pending detailed additive review.
+e690,Flavor enhancer E690,Review Needed,Seed catalog entry for E690 pending detailed additive review.
+e691,Flavor enhancer E691,Review Needed,Seed catalog entry for E691 pending detailed additive review.
+e692,Flavor enhancer E692,Review Needed,Seed catalog entry for E692 pending detailed additive review.
+e693,Flavor enhancer E693,Review Needed,Seed catalog entry for E693 pending detailed additive review.
+e694,Flavor enhancer E694,Review Needed,Seed catalog entry for E694 pending detailed additive review.
+e695,Flavor enhancer E695,Review Needed,Seed catalog entry for E695 pending detailed additive review.
+e696,Flavor enhancer E696,Review Needed,Seed catalog entry for E696 pending detailed additive review.
+e697,Flavor enhancer E697,Review Needed,Seed catalog entry for E697 pending detailed additive review.
+e698,Flavor enhancer E698,Review Needed,Seed catalog entry for E698 pending detailed additive review.
+e699,Flavor enhancer E699,Review Needed,Seed catalog entry for E699 pending detailed additive review.
+e900,Sweetener and glazing agent E900,Review Needed,Seed catalog entry for E900 pending detailed additive review.
+e901,Sweetener and glazing agent E901,Review Needed,Seed catalog entry for E901 pending detailed additive review.
+e902,Sweetener and glazing agent E902,Review Needed,Seed catalog entry for E902 pending detailed additive review.
+e903,Sweetener and glazing agent E903,Review Needed,Seed catalog entry for E903 pending detailed additive review.
+e904,Sweetener and glazing agent E904,Review Needed,Seed catalog entry for E904 pending detailed additive review.
+e905,Sweetener and glazing agent E905,Review Needed,Seed catalog entry for E905 pending detailed additive review.
+e906,Sweetener and glazing agent E906,Review Needed,Seed catalog entry for E906 pending detailed additive review.
+e907,Sweetener and glazing agent E907,Review Needed,Seed catalog entry for E907 pending detailed additive review.
+e908,Sweetener and glazing agent E908,Review Needed,Seed catalog entry for E908 pending detailed additive review.
+e909,Sweetener and glazing agent E909,Review Needed,Seed catalog entry for E909 pending detailed additive review.
+e910,Sweetener and glazing agent E910,Review Needed,Seed catalog entry for E910 pending detailed additive review.
+e911,Sweetener and glazing agent E911,Review Needed,Seed catalog entry for E911 pending detailed additive review.
+e912,Sweetener and glazing agent E912,Review Needed,Seed catalog entry for E912 pending detailed additive review.
+e913,Sweetener and glazing agent E913,Review Needed,Seed catalog entry for E913 pending detailed additive review.
+e914,Sweetener and glazing agent E914,Review Needed,Seed catalog entry for E914 pending detailed additive review.
+e915,Sweetener and glazing agent E915,Review Needed,Seed catalog entry for E915 pending detailed additive review.
+e916,Sweetener and glazing agent E916,Review Needed,Seed catalog entry for E916 pending detailed additive review.
+e917,Sweetener and glazing agent E917,Review Needed,Seed catalog entry for E917 pending detailed additive review.
+e918,Sweetener and glazing agent E918,Review Needed,Seed catalog entry for E918 pending detailed additive review.
+e919,Sweetener and glazing agent E919,Review Needed,Seed catalog entry for E919 pending detailed additive review.
+e920,Sweetener and glazing agent E920,Review Needed,Seed catalog entry for E920 pending detailed additive review.
+e921,Sweetener and glazing agent E921,Review Needed,Seed catalog entry for E921 pending detailed additive review.
+e922,Sweetener and glazing agent E922,Review Needed,Seed catalog entry for E922 pending detailed additive review.
+e923,Sweetener and glazing agent E923,Review Needed,Seed catalog entry for E923 pending detailed additive review.
+e924,Sweetener and glazing agent E924,Review Needed,Seed catalog entry for E924 pending detailed additive review.
+e925,Sweetener and glazing agent E925,Review Needed,Seed catalog entry for E925 pending detailed additive review.
+e926,Sweetener and glazing agent E926,Review Needed,Seed catalog entry for E926 pending detailed additive review.
+e927,Sweetener and glazing agent E927,Review Needed,Seed catalog entry for E927 pending detailed additive review.
+e928,Sweetener and glazing agent E928,Review Needed,Seed catalog entry for E928 pending detailed additive review.
+e929,Sweetener and glazing agent E929,Review Needed,Seed catalog entry for E929 pending detailed additive review.
+e930,Sweetener and glazing agent E930,Review Needed,Seed catalog entry for E930 pending detailed additive review.
+e931,Sweetener and glazing agent E931,Review Needed,Seed catalog entry for E931 pending detailed additive review.
+e932,Sweetener and glazing agent E932,Review Needed,Seed catalog entry for E932 pending detailed additive review.
+e933,Sweetener and glazing agent E933,Review Needed,Seed catalog entry for E933 pending detailed additive review.
+e934,Sweetener and glazing agent E934,Review Needed,Seed catalog entry for E934 pending detailed additive review.
+e935,Sweetener and glazing agent E935,Review Needed,Seed catalog entry for E935 pending detailed additive review.
+e936,Sweetener and glazing agent E936,Review Needed,Seed catalog entry for E936 pending detailed additive review.
+e937,Sweetener and glazing agent E937,Review Needed,Seed catalog entry for E937 pending detailed additive review.
+e938,Sweetener and glazing agent E938,Review Needed,Seed catalog entry for E938 pending detailed additive review.
+e939,Sweetener and glazing agent E939,Review Needed,Seed catalog entry for E939 pending detailed additive review.
+e940,Sweetener and glazing agent E940,Review Needed,Seed catalog entry for E940 pending detailed additive review.
+e941,Sweetener and glazing agent E941,Review Needed,Seed catalog entry for E941 pending detailed additive review.
+e942,Sweetener and glazing agent E942,Review Needed,Seed catalog entry for E942 pending detailed additive review.
+e943,Sweetener and glazing agent E943,Review Needed,Seed catalog entry for E943 pending detailed additive review.
+e944,Sweetener and glazing agent E944,Review Needed,Seed catalog entry for E944 pending detailed additive review.
+e945,Sweetener and glazing agent E945,Review Needed,Seed catalog entry for E945 pending detailed additive review.
+e946,Sweetener and glazing agent E946,Review Needed,Seed catalog entry for E946 pending detailed additive review.
+e947,Sweetener and glazing agent E947,Review Needed,Seed catalog entry for E947 pending detailed additive review.
+e948,Sweetener and glazing agent E948,Review Needed,Seed catalog entry for E948 pending detailed additive review.
+e949,Sweetener and glazing agent E949,Review Needed,Seed catalog entry for E949 pending detailed additive review.
+e950,Acesulfame K,High,Intense sweetener often used in diet drinks and gums.
+e951,Aspartame,High,Intense sweetener that requires clear label disclosure.
+e952,Sweetener and glazing agent E952,Review Needed,Seed catalog entry for E952 pending detailed additive review.
+e953,Sweetener and glazing agent E953,Review Needed,Seed catalog entry for E953 pending detailed additive review.
+e954,Sweetener and glazing agent E954,Review Needed,Seed catalog entry for E954 pending detailed additive review.
+e955,Sweetener and glazing agent E955,Review Needed,Seed catalog entry for E955 pending detailed additive review.
+e956,Sweetener and glazing agent E956,Review Needed,Seed catalog entry for E956 pending detailed additive review.
+e957,Sweetener and glazing agent E957,Review Needed,Seed catalog entry for E957 pending detailed additive review.
+e958,Sweetener and glazing agent E958,Review Needed,Seed catalog entry for E958 pending detailed additive review.
+e959,Sweetener and glazing agent E959,Review Needed,Seed catalog entry for E959 pending detailed additive review.
+e960,Sweetener and glazing agent E960,Review Needed,Seed catalog entry for E960 pending detailed additive review.
+e961,Sweetener and glazing agent E961,Review Needed,Seed catalog entry for E961 pending detailed additive review.
+e962,Sweetener and glazing agent E962,Review Needed,Seed catalog entry for E962 pending detailed additive review.
+e963,Sweetener and glazing agent E963,Review Needed,Seed catalog entry for E963 pending detailed additive review.
+e964,Sweetener and glazing agent E964,Review Needed,Seed catalog entry for E964 pending detailed additive review.
+e965,Sweetener and glazing agent E965,Review Needed,Seed catalog entry for E965 pending detailed additive review.
+e966,Sweetener and glazing agent E966,Review Needed,Seed catalog entry for E966 pending detailed additive review.
+e967,Sweetener and glazing agent E967,Review Needed,Seed catalog entry for E967 pending detailed additive review.
+e968,Sweetener and glazing agent E968,Review Needed,Seed catalog entry for E968 pending detailed additive review.
+e969,Sweetener and glazing agent E969,Review Needed,Seed catalog entry for E969 pending detailed additive review.
+e970,Sweetener and glazing agent E970,Review Needed,Seed catalog entry for E970 pending detailed additive review.
+e971,Sweetener and glazing agent E971,Review Needed,Seed catalog entry for E971 pending detailed additive review.
+e972,Sweetener and glazing agent E972,Review Needed,Seed catalog entry for E972 pending detailed additive review.
+e973,Sweetener and glazing agent E973,Review Needed,Seed catalog entry for E973 pending detailed additive review.
+e974,Sweetener and glazing agent E974,Review Needed,Seed catalog entry for E974 pending detailed additive review.
+e975,Sweetener and glazing agent E975,Review Needed,Seed catalog entry for E975 pending detailed additive review.
+e976,Sweetener and glazing agent E976,Review Needed,Seed catalog entry for E976 pending detailed additive review.
+e977,Sweetener and glazing agent E977,Review Needed,Seed catalog entry for E977 pending detailed additive review.
+e978,Sweetener and glazing agent E978,Review Needed,Seed catalog entry for E978 pending detailed additive review.
+e979,Sweetener and glazing agent E979,Review Needed,Seed catalog entry for E979 pending detailed additive review.
+e980,Sweetener and glazing agent E980,Review Needed,Seed catalog entry for E980 pending detailed additive review.
+e981,Sweetener and glazing agent E981,Review Needed,Seed catalog entry for E981 pending detailed additive review.
+e982,Sweetener and glazing agent E982,Review Needed,Seed catalog entry for E982 pending detailed additive review.
+e983,Sweetener and glazing agent E983,Review Needed,Seed catalog entry for E983 pending detailed additive review.
+e984,Sweetener and glazing agent E984,Review Needed,Seed catalog entry for E984 pending detailed additive review.
+e985,Sweetener and glazing agent E985,Review Needed,Seed catalog entry for E985 pending detailed additive review.
+e986,Sweetener and glazing agent E986,Review Needed,Seed catalog entry for E986 pending detailed additive review.
+e987,Sweetener and glazing agent E987,Review Needed,Seed catalog entry for E987 pending detailed additive review.
+e988,Sweetener and glazing agent E988,Review Needed,Seed catalog entry for E988 pending detailed additive review.
+e989,Sweetener and glazing agent E989,Review Needed,Seed catalog entry for E989 pending detailed additive review.
+e990,Sweetener and glazing agent E990,Review Needed,Seed catalog entry for E990 pending detailed additive review.
+e991,Sweetener and glazing agent E991,Review Needed,Seed catalog entry for E991 pending detailed additive review.
+e992,Sweetener and glazing agent E992,Review Needed,Seed catalog entry for E992 pending detailed additive review.
+e993,Sweetener and glazing agent E993,Review Needed,Seed catalog entry for E993 pending detailed additive review.
+e994,Sweetener and glazing agent E994,Review Needed,Seed catalog entry for E994 pending detailed additive review.
+e995,Sweetener and glazing agent E995,Review Needed,Seed catalog entry for E995 pending detailed additive review.
+e996,Sweetener and glazing agent E996,Review Needed,Seed catalog entry for E996 pending detailed additive review.
+e997,Sweetener and glazing agent E997,Review Needed,Seed catalog entry for E997 pending detailed additive review.
+e998,Sweetener and glazing agent E998,Review Needed,Seed catalog entry for E998 pending detailed additive review.
+e999,Sweetener and glazing agent E999,Review Needed,Seed catalog entry for E999 pending detailed additive review.

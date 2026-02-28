@@ -8,6 +8,7 @@ import com.barcodebite.backend.repository.ProductRepository
 class ProductService(
     private val repository: ProductRepository,
     private val externalProductLookup: ExternalProductLookup,
+    private val additiveCatalogService: AdditiveCatalogService,
 ) {
     fun getOrCreate(barcode: String): ProductRecord {
         repository.findByBarcode(barcode)?.let { return it }
@@ -18,6 +19,10 @@ class ProductService(
 
     fun createOrUpdate(product: ProductRecord): ProductRecord {
         return repository.upsert(product)
+    }
+
+    fun resolveAdditives(codes: List<String>): List<AdditiveCatalogEntry> {
+        return additiveCatalogService.resolve(codes)
     }
 
     private fun unknownProduct(barcode: String): ProductRecord {
