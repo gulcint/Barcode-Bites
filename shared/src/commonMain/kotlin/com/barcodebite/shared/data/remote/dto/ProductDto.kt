@@ -10,6 +10,7 @@ data class ProductDto(
     val name: String,
     val brand: String,
     val nutrition: NutritionDto,
+    val additives: List<AdditiveDto> = emptyList(),
 )
 
 fun ProductDto.toDomain(): Product = Product(
@@ -24,4 +25,5 @@ fun ProductDto.toDomain(): Product = Product(
         sugar = nutrition.sugar,
         salt = nutrition.salt,
     ),
+    additives = additives.map(AdditiveDto::toDomain),
 )

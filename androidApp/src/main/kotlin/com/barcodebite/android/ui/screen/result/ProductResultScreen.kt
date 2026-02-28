@@ -159,6 +159,10 @@ fun ProductResultScreen(
                     grade = data.score.grade,
                     modifier = Modifier.padding(top = 20.dp),
                 )
+                AdditivesList(
+                    additives = data.product.additives,
+                    modifier = Modifier.padding(top = 20.dp),
+                )
                 Text(
                     text = "Kalori: ${data.product.nutrition.calories} kcal | Şeker: ${data.product.nutrition.sugar} g | Tuz: ${data.product.nutrition.salt} g",
                     style = MaterialTheme.typography.bodySmall,
