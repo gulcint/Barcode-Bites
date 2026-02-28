@@ -1,0 +1,46 @@
+CREATE TABLE scan_history (
+    id TEXT NOT NULL PRIMARY KEY,
+    barcode TEXT NOT NULL,
+    name TEXT NOT NULL,
+    brand TEXT NOT NULL,
+    grade TEXT NOT NULL,
+    score INTEGER NOT NULL,
+    clean_label_score INTEGER NOT NULL,
+    is_junk_food INTEGER NOT NULL,
+    scanned_at_epoch_ms INTEGER NOT NULL
+);
+
+insertOrReplace:
+INSERT OR REPLACE INTO scan_history(
+    id,
+    barcode,
+    name,
+    brand,
+    grade,
+    score,
+    clean_label_score,
+    is_junk_food,
+    scanned_at_epoch_ms
+) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
+
+selectRecent:
+SELECT *
+FROM scan_history
+ORDER BY scanned_at_epoch_ms DESC
+LIMIT ?;
+
+countAll:
+SELECT COUNT(*)
+FROM scan_history;
+
+deleteOverflow:
+DELETE FROM scan_history
+WHERE id IN (
+    SELECT id
+    FROM scan_history
+    ORDER BY scanned_at_epoch_ms DESC
+    LIMIT -1 OFFSET ?
+);
+
+deleteAll:
+DELETE FROM scan_history;
