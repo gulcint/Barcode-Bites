@@ -24,6 +24,7 @@ import androidx.compose.ui.unit.dp
 import com.barcodebite.android.BuildConfig
 import com.barcodebite.android.data.ProductResultData
 import com.barcodebite.android.data.ProductResultRepository
+import com.barcodebite.shared.domain.repository.ScanHistoryRepository
 
 private sealed interface ProductResultUiState {
     data object Loading : ProductResultUiState
@@ -34,10 +35,14 @@ private sealed interface ProductResultUiState {
 @Composable
 fun ProductResultScreen(
     barcode: String,
+    scanHistoryRepository: ScanHistoryRepository,
     onBackToHome: () -> Unit,
 ) {
     val repository = remember {
-        ProductResultRepository(baseUrl = BuildConfig.API_BASE_URL)
+        ProductResultRepository(
+            baseUrl = BuildConfig.API_BASE_URL,
+            scanHistoryRepository = scanHistoryRepository,
+        )
     }
     var reloadKey by remember { mutableIntStateOf(0) }
     var uiState by remember(barcode, reloadKey) {

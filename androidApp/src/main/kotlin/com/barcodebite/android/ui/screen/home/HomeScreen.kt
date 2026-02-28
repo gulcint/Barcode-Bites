@@ -13,7 +13,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun HomeScreen(onScanClick: () -> Unit) {
+fun HomeScreen(
+    onScanClick: () -> Unit,
+    onHistoryClick: () -> Unit,
+) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -30,8 +33,13 @@ fun HomeScreen(onScanClick: () -> Unit) {
             style = MaterialTheme.typography.bodyLarge,
             modifier = Modifier.padding(top = 12.dp, bottom = 24.dp),
         )
-        Button(onClick = onScanClick) {
-            Text("Tarayıcıyı Aç")
+        Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            Button(onClick = onScanClick) {
+                Text("Tarayıcıyı Aç")
+            }
+            Button(onClick = onHistoryClick) {
+                Text("Geçmiş")
+            }
         }
     }
 }
