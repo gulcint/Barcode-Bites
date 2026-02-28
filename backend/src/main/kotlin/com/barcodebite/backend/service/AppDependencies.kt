@@ -18,10 +18,11 @@ fun createDependencies(config: AppConfig): AppDependencies {
     val jwtService = JwtService(config.jwt)
     val scoringService = NutritionScoringService()
     val openFoodFactsClient = OpenFoodFactsClient(config.openFoodFacts)
+    val additiveCatalogService = AdditiveCatalogService()
 
     return AppDependencies(
         authService = AuthService(userRepository, jwtService),
-        productService = ProductService(productRepository, openFoodFactsClient),
+        productService = ProductService(productRepository, openFoodFactsClient, additiveCatalogService),
         analysisService = AnalysisService(productRepository, scoringService),
         userRepository = userRepository,
     )

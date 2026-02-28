@@ -3,6 +3,7 @@ package com.barcodebite.backend.routes
 import com.barcodebite.backend.model.ErrorResponse
 import com.barcodebite.backend.model.NutritionValues
 import com.barcodebite.backend.model.ProductRecord
+import com.barcodebite.backend.service.AdditiveCatalogEntry
 import com.barcodebite.backend.service.ProductService
 import io.ktor.http.HttpStatusCode
 import io.ktor.server.application.call
@@ -25,6 +26,14 @@ data class NutritionPayload(
 )
 
 @Serializable
+data class AdditivePayload(
+    val code: String,
+    val name: String,
+    val riskLevel: String,
+    val description: String,
+)
+
+@Serializable
 data class ProductRequest(
     val barcode: String,
     val name: String,
@@ -41,7 +50,7 @@ data class ProductResponse(
     val brand: String,
     val nutrition: NutritionPayload,
     val ingredients: String,
-    val additives: List<String>,
+    val additives: List<AdditivePayload>,
 )
 
 fun Route.productRoutes(productService: ProductService) {
@@ -54,7 +63,7 @@ fun Route.productRoutes(productService: ProductService) {
             }
 
             val product = productService.getOrCreate(barcode)
-            call.respond(product.toResponse())
+            call.respond(product.toResponse(productService.resolveAdditives(product.additives)))
         }
 
         post {
@@ -65,7 +74,7 @@ fun Route.productRoutes(productService: ProductService) {
             }
 
             val saved = productService.createOrUpdate(request.toDomain())
-            call.respond(HttpStatusCode.Created, saved.toResponse())
+            call.respond(HttpStatusCode.Created, saved.toResponse(productService.resolveAdditives(saved.additives)))
         }
     }
 }
@@ -88,7 +97,7 @@ private fun ProductRequest.toDomain(): ProductRecord {
     )
 }
 
-private fun ProductRecord.toResponse(): ProductResponse {
+private fun ProductRecord.toResponse(additives: List<AdditiveCatalogEntry>): ProductResponse {
     return ProductResponse(
         barcode = barcode,
         name = name,
@@ -102,6 +111,13 @@ private fun ProductRecord.toResponse(): ProductResponse {
             salt = nutrition.salt,
         ),
         ingredients = ingredients,
-        additives = additives,
+        additives = additives.map {
+            AdditivePayload(
+                code = it.code,
+                name = it.name,
+                riskLevel = it.riskLevel,
+                description = it.description,
+            )
+        },
     )
 }
