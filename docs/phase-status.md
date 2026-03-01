@@ -18,7 +18,20 @@ Status: Completed baseline
 - Privacy policy + terms: added
 - Beta test plan: added
 
-## Remaining Operational Tasks (non-code)
-- Provision production credentials (DB, JWT secret, billing products)
-- Google Play listing content and legal review sign-off
-- Launch monitor runbook and on-call ownership
+## Phase 5 — Production Operations
+Status: Completed
+- Production credential checklist: `docs/release/production-credentials-checklist.md`
+- Play Store release checklist: `docs/release/play-store-release-checklist.md`
+- Launch monitoring runbook: `docs/release/launch-runbook.md`
+- On-call ownership map: `docs/release/oncall-ownership.md`
+- Backend preflight env validator: `backend/scripts/preflight-production.sh`
+- Backend production env template: `backend/.env.production.example`
+
+## Phase 6 — CI/CD and Quality Gates
+Status: Completed
+- GitHub Actions CI workflow: `.github/workflows/ci.yml`
+- Dependabot weekly updates: `.github/dependabot.yml`
+- CI/CD baseline document: `docs/release/ci-cd.md`
+
+## Remaining Tasks
+- None in repository scope. Remaining steps are real credential entry and console approvals at release time.
