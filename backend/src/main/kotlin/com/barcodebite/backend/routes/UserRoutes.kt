@@ -1,5 +1,6 @@
 package com.barcodebite.backend.routes
 
+import com.barcodebite.backend.repository.UserRepository
 import com.barcodebite.backend.security.CurrentUserPrincipal
 import io.ktor.http.HttpStatusCode
 import io.ktor.server.application.call
@@ -15,9 +16,13 @@ import kotlinx.serialization.Serializable
 data class UserMeResponse(
     val id: Int,
     val email: String,
+    val displayName: String,
+    val createdAtEpochMs: Long,
 )
 
-fun Route.userRoutes() {
+fun Route.userRoutes(
+    userRepository: UserRepository,
+) {
     route("/users") {
         authenticate("auth-jwt") {
             get("/me") {
@@ -27,7 +32,20 @@ fun Route.userRoutes() {
                     return@get
                 }
 
-                call.respond(UserMeResponse(id = principal.id, email = principal.email))
+                val user = userRepository.findById(principal.id)
+                if (user == null) {
+                    call.respond(HttpStatusCode.NotFound)
+                    return@get
+                }
+
+                call.respond(
+                    UserMeResponse(
+                        id = user.id,
+                        email = user.email,
+                        displayName = user.displayName,
+                        createdAtEpochMs = user.createdAtEpochMs,
+                    ),
+                )
             }
         }
     }

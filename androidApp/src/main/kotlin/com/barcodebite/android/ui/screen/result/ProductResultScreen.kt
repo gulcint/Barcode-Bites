@@ -1,5 +1,8 @@
 package com.barcodebite.android.ui.screen.result
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.slideInVertically
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -114,65 +117,72 @@ fun ProductResultScreen(
 
             is ProductResultUiState.Success -> {
                 val data = state.data
-                Text(
-                    text = "Barkod: ${data.product.barcode}",
-                    style = MaterialTheme.typography.bodyMedium,
-                    modifier = Modifier.padding(top = 12.dp),
-                )
-                Text(
-                    text = data.product.name,
-                    style = MaterialTheme.typography.titleLarge,
-                    modifier = Modifier.padding(top = 4.dp),
-                )
-                Text(
-                    text = data.product.brand,
-                    style = MaterialTheme.typography.bodyLarge,
-                    modifier = Modifier.padding(top = 4.dp),
-                )
-                Text(
-                    text = "Skor: ${data.score.score} (${data.score.grade})",
-                    style = MaterialTheme.typography.titleMedium,
-                    modifier = Modifier.padding(top = 16.dp),
-                )
-                Text(
-                    text = data.score.reason,
-                    style = MaterialTheme.typography.bodyMedium,
-                    modifier = Modifier.padding(top = 6.dp),
-                )
-                Text(
-                    text = "Clean Label: ${data.score.cleanLabelScore}/100 (${data.score.cleanLabelVerdict})",
-                    style = MaterialTheme.typography.titleSmall,
-                    modifier = Modifier.padding(top = 10.dp),
-                )
-                if (data.score.isJunkFood) {
-                    Text(
-                        text = "Junk Food Uyarisi",
-                        color = MaterialTheme.colorScheme.error,
-                        style = MaterialTheme.typography.titleSmall,
-                        modifier = Modifier.padding(top = 10.dp),
-                    )
-                    data.score.junkFoodReasons.forEach { reason ->
+                AnimatedVisibility(
+                    visible = true,
+                    enter = fadeIn() + slideInVertically(initialOffsetY = { it / 2 }),
+                ) {
+                    Column(verticalArrangement = Arrangement.spacedBy(4.dp), modifier = Modifier.padding(top = 12.dp)) {
                         Text(
-                            text = "- $reason",
-                            style = MaterialTheme.typography.bodySmall,
-                            modifier = Modifier.padding(top = 2.dp),
+                            text = "Barkod: ${data.product.barcode}",
+                            style = MaterialTheme.typography.bodyMedium,
                         )
+                        Text(text = data.product.name, style = MaterialTheme.typography.titleLarge)
+                        Text(text = data.product.brand, style = MaterialTheme.typography.bodyLarge)
                     }
                 }
-                NutritionChart(
-                    nutrition = data.product.nutrition,
-                    grade = data.score.grade,
-                    modifier = Modifier.padding(top = 20.dp),
-                )
-                AdditivesList(
-                    additives = data.product.additives,
-                    modifier = Modifier.padding(top = 20.dp),
-                )
-                Text(
-                    text = "Kalori: ${data.product.nutrition.calories} kcal | Şeker: ${data.product.nutrition.sugar} g | Tuz: ${data.product.nutrition.salt} g",
-                    style = MaterialTheme.typography.bodySmall,
-                    modifier = Modifier.padding(top = 14.dp),
-                )
+                AnimatedVisibility(visible = true, enter = fadeIn()) {
+                    Column(modifier = Modifier.padding(top = 16.dp)) {
+                        Text(
+                            text = "Skor: ${data.score.score} (${data.score.grade})",
+                            style = MaterialTheme.typography.titleMedium,
+                        )
+                        Text(
+                            text = data.score.reason,
+                            style = MaterialTheme.typography.bodyMedium,
+                            modifier = Modifier.padding(top = 6.dp),
+                        )
+                        Text(
+                            text = "Clean Label: ${data.score.cleanLabelScore}/100 (${data.score.cleanLabelVerdict})",
+                            style = MaterialTheme.typography.titleSmall,
+                            modifier = Modifier.padding(top = 10.dp),
+                        )
+                        if (data.score.isJunkFood) {
+                            Text(
+                                text = "Junk Food Uyarisi",
+                                color = MaterialTheme.colorScheme.error,
+                                style = MaterialTheme.typography.titleSmall,
+                                modifier = Modifier.padding(top = 10.dp),
+                            )
+                            data.score.junkFoodReasons.forEach { reason ->
+                                Text(
+                                    text = "- $reason",
+                                    style = MaterialTheme.typography.bodySmall,
+                                    modifier = Modifier.padding(top = 2.dp),
+                                )
+                            }
+                        }
+                    }
+                }
+                AnimatedVisibility(visible = true, enter = fadeIn()) {
+                    NutritionChart(
+                        nutrition = data.product.nutrition,
+                        grade = data.score.grade,
+                        modifier = Modifier.padding(top = 20.dp),
+                    )
+                }
+                AnimatedVisibility(visible = true, enter = fadeIn()) {
+                    AdditivesList(
+                        additives = data.product.additives,
+                        modifier = Modifier.padding(top = 20.dp),
+                    )
+                }
+                AnimatedVisibility(visible = true, enter = fadeIn()) {
+                    Text(
+                        text = "Kalori: ${data.product.nutrition.calories} kcal | Şeker: ${data.product.nutrition.sugar} g | Tuz: ${data.product.nutrition.salt} g",
+                        style = MaterialTheme.typography.bodySmall,
+                        modifier = Modifier.padding(top = 14.dp),
+                    )
+                }
             }
         }
 

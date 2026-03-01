@@ -17,6 +17,7 @@ class UserRepository {
                 val insert = UsersTable.insert {
                     it[UsersTable.email] = email
                     it[UsersTable.passwordHash] = passwordHash
+                    it[displayName] = email.substringBefore("@").ifBlank { "BarcodeBite User" }
                     it[createdAtEpochMs] = Instant.now().toEpochMilli()
                 }
                 rowToUser(insert.resultedValues?.firstOrNull())
@@ -57,6 +58,8 @@ class UserRepository {
             id = row[UsersTable.id].value,
             email = row[UsersTable.email],
             passwordHash = row[UsersTable.passwordHash],
+            displayName = row[UsersTable.displayName] ?: row[UsersTable.email].substringBefore("@"),
+            createdAtEpochMs = row[UsersTable.createdAtEpochMs],
         )
     }
 }

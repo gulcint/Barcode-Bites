@@ -17,6 +17,7 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.longOrNull
 import kotlinx.serialization.json.boolean
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
@@ -85,7 +86,43 @@ class ApplicationTest {
             headers.append(HttpHeaders.Authorization, "Bearer $accessToken")
         }
         assertEquals(HttpStatusCode.OK, meResponse.status)
-        assertTrue(meResponse.bodyAsText().contains("alice@barcodebite.dev"))
+        val meJson = json.parseToJsonElement(meResponse.bodyAsText()).jsonObject
+        assertEquals("alice@barcodebite.dev", meJson["email"]?.jsonPrimitive?.content)
+        assertEquals("alice", meJson["displayName"]?.jsonPrimitive?.content)
+        assertTrue((meJson["createdAtEpochMs"]?.jsonPrimitive?.longOrNull ?: 0L) > 0L)
+
+        val subscriptionResponse = client.get("/v1/subscriptions/status") {
+            headers.append(HttpHeaders.Authorization, "Bearer $accessToken")
+        }
+        assertEquals(HttpStatusCode.OK, subscriptionResponse.status)
+        val subscriptionJson = json.parseToJsonElement(subscriptionResponse.bodyAsText()).jsonObject
+        assertEquals("free", subscriptionJson["plan"]?.jsonPrimitive?.content)
+        assertEquals(false, subscriptionJson["isActive"]?.jsonPrimitive?.boolean)
+        assertEquals(null, subscriptionJson["expiresAtEpochMs"]?.jsonPrimitive?.longOrNull)
+        val entitlements = subscriptionJson["entitlements"]?.jsonObject ?: error("missing entitlements")
+        assertEquals(false, entitlements["compare"]?.jsonPrimitive?.boolean)
+        assertEquals(false, entitlements["advanced_analysis"]?.jsonPrimitive?.boolean)
+        assertEquals(false, entitlements["unlimited_scans"]?.jsonPrimitive?.boolean)
+
+        val verifyResponse = client.post("/v1/subscriptions/verify") {
+            headers.append(HttpHeaders.Authorization, "Bearer $accessToken")
+            contentType(ContentType.Application.Json)
+            setBody("""{"plan":"premium_monthly","purchaseToken":"tok_test_123"}""")
+        }
+        assertEquals(HttpStatusCode.OK, verifyResponse.status)
+        val verifiedJson = json.parseToJsonElement(verifyResponse.bodyAsText()).jsonObject
+        assertEquals("premium_monthly", verifiedJson["plan"]?.jsonPrimitive?.content)
+        assertEquals(true, verifiedJson["isActive"]?.jsonPrimitive?.boolean)
+
+        val restoreResponse = client.post("/v1/subscriptions/restore") {
+            headers.append(HttpHeaders.Authorization, "Bearer $accessToken")
+            contentType(ContentType.Application.Json)
+            setBody("""{"purchaseToken":"tok_test_123"}""")
+        }
+        assertEquals(HttpStatusCode.OK, restoreResponse.status)
+        val restoreJson = json.parseToJsonElement(restoreResponse.bodyAsText()).jsonObject
+        assertEquals("premium_monthly", restoreJson["plan"]?.jsonPrimitive?.content)
+        assertEquals(true, restoreJson["isActive"]?.jsonPrimitive?.boolean)
 
         val invalidLoginResponse = client.post("/v1/auth/login") {
             contentType(ContentType.Application.Json)
@@ -193,5 +230,13 @@ class ApplicationTest {
         assertEquals(false, healthyAnalysisJson["isJunkFood"]?.jsonPrimitive?.boolean)
         val healthyReasons = healthyAnalysisJson["junkFoodReasons"]?.jsonArray?.map { it.jsonPrimitive.content } ?: emptyList()
         assertTrue(healthyReasons.isEmpty())
+
+        val compareResponse = client.post("/v1/analysis/compare") {
+            contentType(ContentType.Application.Json)
+            setBody("""{"firstBarcode":"$barcode","secondBarcode":"$healthyBarcode"}""")
+        }
+        assertEquals(HttpStatusCode.OK, compareResponse.status)
+        val compareJson = json.parseToJsonElement(compareResponse.bodyAsText()).jsonObject
+        assertEquals(healthyBarcode, compareJson["recommendation"]?.jsonPrimitive?.content)
     }
 }

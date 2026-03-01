@@ -6,6 +6,7 @@ import org.jetbrains.exposed.sql.Table
 object UsersTable : IntIdTable("users") {
     val email = varchar("email", length = 255).uniqueIndex()
     val passwordHash = varchar("password_hash", length = 72)
+    val displayName = varchar("display_name", length = 120).nullable()
     val createdAtEpochMs = long("created_at_epoch_ms")
 }
 

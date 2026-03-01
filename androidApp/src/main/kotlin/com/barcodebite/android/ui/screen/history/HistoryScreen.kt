@@ -1,5 +1,13 @@
 package com.barcodebite.android.ui.screen.history
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.core.RepeatMode
+import androidx.compose.animation.core.animateFloat
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.rememberInfiniteTransition
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -17,6 +25,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import java.text.SimpleDateFormat
@@ -57,9 +66,21 @@ fun HistoryScreen(
             }
 
             HistoryUiState.Empty -> {
+                val pulse = rememberInfiniteTransition(label = "history-empty")
+                val alpha by pulse.animateFloat(
+                    initialValue = 0.4f,
+                    targetValue = 1f,
+                    animationSpec = infiniteRepeatable(
+                        animation = tween(900),
+                        repeatMode = RepeatMode.Reverse,
+                    ),
+                    label = "history-empty-alpha",
+                )
                 Text(
                     text = "Henüz tarama yok.",
-                    modifier = Modifier.padding(top = 16.dp),
+                    modifier = Modifier
+                        .padding(top = 16.dp)
+                        .alpha(alpha),
                 )
             }
 
@@ -79,28 +100,33 @@ fun HistoryScreen(
                         .weight(1f, fill = false),
                     verticalArrangement = Arrangement.spacedBy(12.dp),
                 ) {
-                    items(state.items, key = { it.scannedAtEpochMs }) { item ->
-                        Column(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .clickable { onOpenResult(item.product.barcode) },
+                    items(items = state.items, key = { it.scannedAtEpochMs }) { item ->
+                        AnimatedVisibility(
+                            visible = true,
+                            enter = fadeIn() + slideInVertically(initialOffsetY = { it / 3 }),
                         ) {
-                            Text(
-                                text = item.product.name,
-                                style = MaterialTheme.typography.titleMedium,
-                            )
-                            Text(
-                                text = "${item.product.brand} • ${item.product.barcode}",
-                                style = MaterialTheme.typography.bodyMedium,
-                            )
-                            Text(
-                                text = "Skor: ${item.nutritionScore.score} (${item.nutritionScore.grade})",
-                                style = MaterialTheme.typography.bodySmall,
-                            )
-                            Text(
-                                text = "Tarama: ${item.scannedAtEpochMs.toDateText()}",
-                                style = MaterialTheme.typography.bodySmall,
-                            )
+                            Column(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clickable { onOpenResult(item.product.barcode) },
+                            ) {
+                                Text(
+                                    text = item.product.name,
+                                    style = MaterialTheme.typography.titleMedium,
+                                )
+                                Text(
+                                    text = "${item.product.brand} • ${item.product.barcode}",
+                                    style = MaterialTheme.typography.bodyMedium,
+                                )
+                                Text(
+                                    text = "Skor: ${item.nutritionScore.score} (${item.nutritionScore.grade})",
+                                    style = MaterialTheme.typography.bodySmall,
+                                )
+                                Text(
+                                    text = "Tarama: ${item.scannedAtEpochMs.toDateText()}",
+                                    style = MaterialTheme.typography.bodySmall,
+                                )
+                            }
                         }
                     }
                 }
