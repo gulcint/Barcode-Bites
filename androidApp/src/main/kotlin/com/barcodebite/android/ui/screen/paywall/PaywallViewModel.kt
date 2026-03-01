@@ -1,5 +1,6 @@
 package com.barcodebite.android.ui.screen.paywall
 
+import com.barcodebite.android.data.profile.SubscriptionSyncRepository
 import com.barcodebite.android.premium.PremiumGate
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -15,6 +16,8 @@ sealed interface PaywallUiState {
 
 class PaywallViewModel(
     private val premiumGate: PremiumGate,
+    private val subscriptionSyncRepository: SubscriptionSyncRepository? = null,
+    private val accessTokenProvider: () -> String? = { null },
 ) {
     private val _uiState = MutableStateFlow<PaywallUiState>(PaywallUiState.Idle)
     val uiState: StateFlow<PaywallUiState> = _uiState.asStateFlow()
@@ -43,13 +46,49 @@ class PaywallViewModel(
         }
     }
 
-    fun onExternalPurchase(plan: String) {
+    suspend fun onExternalPurchase(
+        plan: String,
+        purchaseToken: String,
+    ) {
         if (plan.isBlank()) {
             _uiState.update { PaywallUiState.Error("Gecersiz plan") }
             return
         }
         premiumGate.enablePremium(plan)
+        runCatching {
+            subscriptionSyncRepository?.verify(
+                plan = plan,
+                purchaseToken = purchaseToken,
+                accessToken = accessTokenProvider(),
+            )
+        }
         _uiState.update { PaywallUiState.Success(plan) }
+    }
+
+    suspend fun onExternalRestore(purchaseToken: String) {
+        runCatching {
+            subscriptionSyncRepository?.restore(
+                purchaseToken = purchaseToken,
+                accessToken = accessTokenProvider(),
+            )
+        }.onSuccess { status ->
+            if (status != null && status.isActive) {
+                premiumGate.enablePremium(status.plan)
+                _uiState.update { PaywallUiState.Success(status.plan) }
+                return
+            }
+            if (premiumGate.isPremiumEnabled()) {
+                _uiState.update { PaywallUiState.Success("premium_restored") }
+                return
+            }
+            _uiState.update { PaywallUiState.Error("Geri yuklenecek satin alma bulunamadi") }
+        }.onFailure {
+            if (premiumGate.isPremiumEnabled()) {
+                _uiState.update { PaywallUiState.Success("premium_restored") }
+            } else {
+                _uiState.update { PaywallUiState.Error("Geri yukleme basarisiz") }
+            }
+        }
     }
 
     fun onExternalError(message: String) {
