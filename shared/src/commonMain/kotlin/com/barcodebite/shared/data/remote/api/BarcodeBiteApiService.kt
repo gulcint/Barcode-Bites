@@ -3,7 +3,9 @@ package com.barcodebite.shared.data.remote.api
 import com.barcodebite.shared.data.remote.dto.AnalysisDto
 import com.barcodebite.shared.data.remote.dto.AnalysisCompareDto
 import com.barcodebite.shared.data.remote.dto.ProductDto
+import com.barcodebite.shared.data.remote.dto.RestoreSubscriptionRequestDto
 import com.barcodebite.shared.data.remote.dto.SubscriptionStatusDto
+import com.barcodebite.shared.data.remote.dto.VerifySubscriptionRequestDto
 import com.barcodebite.shared.data.remote.dto.UserProfileDto
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
@@ -51,6 +53,27 @@ class BarcodeBiteApiService(
         }.body()
     }
 
+    suspend fun verifySubscription(
+        plan: String,
+        purchaseToken: String,
+        accessToken: String?,
+    ): SubscriptionStatusDto {
+        return client.post(fullPath(subscriptionVerifyPath)) {
+            applyOptionalAuth(accessToken)
+            setBody(VerifySubscriptionRequestDto(plan = plan, purchaseToken = purchaseToken))
+        }.body()
+    }
+
+    suspend fun restoreSubscription(
+        purchaseToken: String,
+        accessToken: String?,
+    ): SubscriptionStatusDto {
+        return client.post(fullPath(subscriptionRestorePath)) {
+            applyOptionalAuth(accessToken)
+            setBody(RestoreSubscriptionRequestDto(purchaseToken = purchaseToken))
+        }.body()
+    }
+
     private fun fullPath(path: String): String = "$baseUrl$path"
 
     private fun io.ktor.client.request.HttpRequestBuilder.applyOptionalAuth(accessToken: String?) {
@@ -65,6 +88,8 @@ class BarcodeBiteApiService(
         const val analysisComparePath: String = "/v1/analysis/compare"
         const val userProfilePath: String = "/v1/users/me"
         const val subscriptionStatusPath: String = "/v1/subscriptions/status"
+        const val subscriptionVerifyPath: String = "/v1/subscriptions/verify"
+        const val subscriptionRestorePath: String = "/v1/subscriptions/restore"
     }
 }
 

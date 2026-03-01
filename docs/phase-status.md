@@ -8,6 +8,7 @@ Status: Completed
 
 ## Phase 3 — Premium & Polish
 Status: Completed (billing integration in-app with fallback, paywall, compare, onboarding/splash, micro-animations)
+- Hardening update (March 1, 2026): purchase/restore flows now sync with backend `/v1/subscriptions/verify` and `/v1/subscriptions/restore` when token exists.
 
 ## Phase 4 — Release Readiness
 Status: Completed baseline

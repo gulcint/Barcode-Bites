@@ -10,6 +10,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.barcodebite.android.data.profile.ProfileRepository
+import com.barcodebite.android.data.profile.SubscriptionSyncRepository
 import com.barcodebite.android.data.compare.CompareRepository
 import com.barcodebite.android.ui.screen.history.HistoryScreen
 import com.barcodebite.android.ui.screen.history.HistoryViewModel
@@ -45,6 +46,7 @@ object AppRoute {
 fun AppNavigation(
     scanHistoryRepository: ScanHistoryRepository,
     profileRepository: ProfileRepository,
+    subscriptionSyncRepository: SubscriptionSyncRepository,
     compareRepository: CompareRepository,
     premiumGate: PremiumGate,
     isOnboardingCompleted: () -> Boolean,
@@ -61,8 +63,12 @@ fun AppNavigation(
             accessTokenProvider = accessTokenProvider,
         )
     }
-    val paywallViewModel = remember(premiumGate) {
-        PaywallViewModel(premiumGate = premiumGate)
+    val paywallViewModel = remember(premiumGate, subscriptionSyncRepository) {
+        PaywallViewModel(
+            premiumGate = premiumGate,
+            subscriptionSyncRepository = subscriptionSyncRepository,
+            accessTokenProvider = accessTokenProvider,
+        )
     }
     val compareViewModel = remember(compareRepository) {
         CompareViewModel(repository = compareRepository)
