@@ -1,6 +1,16 @@
 .gradle/
 .kotlin/
 .tmp/
+.gradle-local/
 build/
 **/build/
 .DS_Store
+local.properties
+.codex-context.md
+backend/settings.isolated.gradle.kts
+* 2.kts
+* 2.md
+* 2.pro
+CODEX_WORKFLOW.md
+dev-hooks-README.md
+dev-hooks.sh
