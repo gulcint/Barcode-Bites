@@ -1,6 +1,7 @@
 package com.barcodebite.backend.service
 
 import com.barcodebite.backend.model.AnalysisResult
+import com.barcodebite.backend.model.AnalysisComparisonResult
 import com.barcodebite.backend.model.NutritionValues
 import com.barcodebite.backend.model.ProductRecord
 import com.barcodebite.backend.repository.ProductRepository
@@ -44,6 +45,21 @@ class AnalysisService(
             isJunkFood = junkFoodAssessment.isJunkFood,
             junkFoodReasons = junkFoodAssessment.reasons,
             summary = "Calculated from stored nutrition profile.",
+        )
+    }
+
+    fun compare(firstBarcode: String, secondBarcode: String): AnalysisComparisonResult {
+        val first = analyze(firstBarcode)
+        val second = analyze(secondBarcode)
+        val recommendation = when {
+            first.score > second.score -> first.barcode
+            second.score > first.score -> second.barcode
+            else -> "equal"
+        }
+        return AnalysisComparisonResult(
+            first = first,
+            second = second,
+            recommendation = recommendation,
         )
     }
 }

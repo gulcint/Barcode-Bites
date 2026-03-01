@@ -33,6 +33,15 @@ data class UserRecord(
     val id: Int,
     val email: String,
     val passwordHash: String,
+    val displayName: String,
+    val createdAtEpochMs: Long,
+)
+
+data class SubscriptionRecord(
+    val userId: Int,
+    val plan: String,
+    val isActive: Boolean,
+    val expiresAtEpochMs: Long?,
 )
 
 data class AnalysisResult(
@@ -44,4 +53,10 @@ data class AnalysisResult(
     val isJunkFood: Boolean,
     val junkFoodReasons: List<String>,
     val summary: String,
+)
+
+data class AnalysisComparisonResult(
+    val first: AnalysisResult,
+    val second: AnalysisResult,
+    val recommendation: String,
 )

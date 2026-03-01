@@ -23,9 +23,9 @@ fun Application.configureRouting(dependencies: AppDependencies) {
         route("/v1") {
             authRoutes(dependencies.authService)
             productRoutes(dependencies.productService)
-            analysisRoutes(dependencies.analysisService)
-            userRoutes()
-            subscriptionRoutes()
+            analysisRoutes(dependencies.analysisService, dependencies.rateLimitService)
+            userRoutes(dependencies.userRepository)
+            subscriptionRoutes(dependencies.subscriptionRepository)
         }
     }
 }
