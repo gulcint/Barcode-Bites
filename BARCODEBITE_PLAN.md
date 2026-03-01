@@ -1109,6 +1109,11 @@ dependencies {
 - [x] On-call ownership mapping
 - [x] Backend production env preflight script
 
+### Faz 6 — CI/CD ve Kalite Kapilari (Hafta 10)
+- [x] GitHub Actions CI pipeline (backend/shared/android gates)
+- [x] PR merge gate dokumantasyonu
+- [x] Dependabot ile haftalik bagimlilik guncellemesi
+
 ---
 
 ## ⚙️ Ortam Kurulumu

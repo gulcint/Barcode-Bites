@@ -27,5 +27,11 @@ Status: Completed
 - Backend preflight env validator: `backend/scripts/preflight-production.sh`
 - Backend production env template: `backend/.env.production.example`
 
+## Phase 6 — CI/CD and Quality Gates
+Status: Completed
+- GitHub Actions CI workflow: `.github/workflows/ci.yml`
+- Dependabot weekly updates: `.github/dependabot.yml`
+- CI/CD baseline document: `docs/release/ci-cd.md`
+
 ## Remaining Tasks
 - None in repository scope. Remaining steps are real credential entry and console approvals at release time.

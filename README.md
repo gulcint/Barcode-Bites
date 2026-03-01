@@ -11,6 +11,7 @@ BarcodeBite is a barcode-based food analysis app with:
 - Phase 3: Completed (paywall, premium gate, compare, splash/onboarding)
 - Phase 4: Completed (release-readiness baseline)
 - Phase 5: Completed (production operations docs + preflight scripts)
+- Phase 6: Completed (CI/CD and quality gates)
 
 Detailed status: `docs/phase-status.md`
 
