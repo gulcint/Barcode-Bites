@@ -6,6 +6,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import com.barcodebite.android.data.compare.CompareRepository
 import com.barcodebite.android.data.profile.DefaultProfileRepository
+import com.barcodebite.android.data.profile.SubscriptionSyncRepository
 import com.barcodebite.android.data.history.HistoryContainer
 import com.barcodebite.android.launch.AppLaunchStore
 import com.barcodebite.android.observability.createAppAnalytics
@@ -27,6 +28,9 @@ fun BarcodeBiteApp() {
     val compareRepository = remember {
         CompareRepository(baseUrl = BuildConfig.API_BASE_URL)
     }
+    val subscriptionSyncRepository = remember {
+        SubscriptionSyncRepository(baseUrl = BuildConfig.API_BASE_URL)
+    }
     val premiumGate = remember {
         SharedPrefsPremiumGate(context.applicationContext)
     }
@@ -44,6 +48,7 @@ fun BarcodeBiteApp() {
         onDispose {
             profileRepository.close()
             compareRepository.close()
+            subscriptionSyncRepository.close()
         }
     }
 
@@ -62,6 +67,7 @@ fun BarcodeBiteApp() {
         AppNavigation(
             scanHistoryRepository = historyContainer.scanHistoryRepository,
             profileRepository = profileRepository,
+            subscriptionSyncRepository = subscriptionSyncRepository,
             compareRepository = compareRepository,
             premiumGate = premiumGate,
             isOnboardingCompleted = { appLaunchStore.isOnboardingCompleted() },

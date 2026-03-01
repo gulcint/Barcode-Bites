@@ -21,11 +21,13 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.unit.dp
 import com.barcodebite.android.billing.PlayBillingGateway
+import kotlinx.coroutines.launch
 
 @Composable
 fun PaywallScreen(
@@ -34,10 +36,23 @@ fun PaywallScreen(
 ) {
     val context = LocalContext.current
     val state by viewModel.uiState.collectAsState()
+    val coroutineScope = rememberCoroutineScope()
     val billingGateway = remember {
         PlayBillingGateway(
             context = context.applicationContext,
-            onPremiumGranted = viewModel::onExternalPurchase,
+            onPurchaseGranted = { plan, purchaseToken ->
+                coroutineScope.launch {
+                    viewModel.onExternalPurchase(
+                        plan = plan,
+                        purchaseToken = purchaseToken,
+                    )
+                }
+            },
+            onPurchaseRestored = { purchaseToken ->
+                coroutineScope.launch {
+                    viewModel.onExternalRestore(purchaseToken)
+                }
+            },
             onError = viewModel::onExternalError,
         )
     }
@@ -91,7 +106,6 @@ fun PaywallScreen(
             }
             Button(onClick = {
                 billingGateway.restorePurchases()
-                viewModel.restore()
             }) {
                 Text("Geri Yukle")
             }

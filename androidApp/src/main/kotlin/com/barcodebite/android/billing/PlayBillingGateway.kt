@@ -13,7 +13,8 @@ import com.android.billingclient.api.QueryPurchasesParams
 
 class PlayBillingGateway(
     context: Context,
-    private val onPremiumGranted: (String) -> Unit,
+    private val onPurchaseGranted: (String, String) -> Unit,
+    private val onPurchaseRestored: (String) -> Unit,
     private val onError: (String) -> Unit,
 ) {
     private val billingClient = BillingClient.newBuilder(context)
@@ -30,7 +31,7 @@ class PlayBillingGateway(
                         else -> "premium_unknown"
                     }
                     acknowledgeIfNeeded(purchase.purchaseToken)
-                    onPremiumGranted(plan)
+                    onPurchaseGranted(plan, purchase.purchaseToken)
                 }
             }
         }
@@ -79,13 +80,8 @@ class PlayBillingGateway(
                 onError("Restorable purchase not found")
                 return@queryPurchasesAsync
             }
-            val plan = when {
-                restored.products.contains(MONTHLY_PRODUCT_ID) -> "premium_monthly"
-                restored.products.contains(YEARLY_PRODUCT_ID) -> "premium_yearly"
-                else -> "premium_unknown"
-            }
             acknowledgeIfNeeded(restored.purchaseToken)
-            onPremiumGranted(plan)
+            onPurchaseRestored(restored.purchaseToken)
         }
     }
 
