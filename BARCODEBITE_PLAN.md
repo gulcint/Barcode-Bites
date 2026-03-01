@@ -1102,6 +1102,13 @@ dependencies {
 - [x] Privacy Policy, Terms of Service
 - [x] Beta test
 
+### Faz 5 — Production Operasyon (Hafta 9)
+- [x] Production credential checklist
+- [x] Play Store release checklist
+- [x] Launch monitoring runbook
+- [x] On-call ownership mapping
+- [x] Backend production env preflight script
+
 ---
 
 ## ⚙️ Ortam Kurulumu
